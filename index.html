@@ -33,15 +33,57 @@
       <li><a href="">Donaciones</a></li>
     </ul>
   </nav>
-</body>
-</html>
-    </header>
-   
-    <main>
+ <!--CARRUSEL-->
+<div class="carousel-container">
+  <div class="carousel" id="carousel">
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Jaguar">
+      <div class="caption">Tigre rescatado en 2023</div>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Tucán">
+      <div class="caption">Tucán recuperado tras tráfico ilegal</div>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Mono">
+      <div class="caption">Mono liberado en hábitat protegido</div>
+    </div>
+      <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Mono">
+      <div class="caption">Mono liberado en hábitat protegido</div>
+    </div>
+  </div>
+</div>
 
-    </main>
- <footer>
+ 
+    
+  
+  <script>
+  const carousel = document.getElementById("carousel");
+  const slides = Array.from(carousel.children);
 
- </footer>
+  // Duplicamos las slides
+  slides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  // Pausar/reanudar animación
+  let isPaused = false;
+
+  function pauseCarousel() {
+    isPaused = true;
+    carousel.style.animationPlayState = 'paused';
+  }
+
+  function resumeCarousel() {
+    isPaused = false;
+    carousel.style.animationPlayState = 'running';
+  }
+
+  carousel.addEventListener("mouseenter", pauseCarousel);
+  carousel.addEventListener("mouseleave", resumeCarousel);
+</script>
+
 </body>
 </html>
