@@ -1,0 +1,93 @@
+/* Variables */
+:root {
+  --bg: #E6F4EA;
+  --text: #4E3D2C;
+  --accent: #7FB77E;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar principal */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+  position: relative;
+}
+
+/* Logo */
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+/* Ícono de menú hamburguesa */
+.navbar__icon {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Checkbox oculto */
+.navbar__toggle {
+  display: none;
+}
+
+/* Enlaces */
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+  color: var(--accent);
+}
+
+/* 🌐 Responsividad */
+@media (max-width: 768px) {
+  .navbar__icon {
+    display: block;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg);
+    display: none;
+    padding: 1rem 2rem;
+  }
+
+  .navbar__toggle:checked + .navbar__icon + .navbar__links {
+    display: flex;
+  }
+
+  .navbar__links li {
+    margin-bottom: 1rem;
+  }
+}
