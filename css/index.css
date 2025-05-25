@@ -1,0 +1,170 @@
+/* Variables */
+:root {
+  --bg: #E6F4EA;
+  --text: #4E3D2C;
+  --accent: #7FB77E;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar principal */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--bg);
+  position: relative;
+}
+
+/* Logo */
+.navbar__logo, p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+font-weight: bold;
+}
+
+.logo-icon {
+  height: auto;
+  width: 150px;
+}
+
+/* Ícono de menú hamburguesa */
+.navbar__icon {
+  font-size: 4rem;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+/* Checkbox oculto */
+.navbar__toggle {
+  display: none;
+}
+
+/* Enlaces */
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+.navbar__links a:hover {
+  color: var(--accent);
+}
+
+/* 🌐 Responsividad */
+@media (max-width: 768px) {
+  .navbar__icon {
+    display: block;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg);
+    display: none;
+    padding: 1rem 2rem;
+  }
+
+  .navbar__toggle:checked + .navbar__icon + .navbar__links {
+    display: flex;
+  }
+
+  .navbar__links li {
+    margin-bottom: 1rem;
+  }
+}
+
+/*Carrusel*/
+.carousel-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  width: max-content;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-900px); /* 3 imágenes visibles * 300px */
+  }
+}
+
+.slide {
+  position: relative;
+  flex-shrink: 0;
+  width: 300px;
+  height: auto; /* o cualquier altura fija que desees */
+}
+
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+}

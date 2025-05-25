@@ -2,10 +2,88 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santuario The Paradise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santuario Wild Paradise</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+
 </head>
 <body>
-    <h1>WELCOME TO PARADISE!</h1>
+    <header>
+         <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navbar Responsive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__logo">
+          <img src="https://i.postimg.cc/hGQNPFrd/Chat-GPT-Image-24-may-2025-22-43-07-removebg-preview.png" alt="Ícono de animales salvajes" class="logo-icon">
+       <p>Wild Paradise</p>
+    </div>
+  
+    <input type="checkbox" id="menu-toggle" class="navbar__toggle">
+    <label for="menu-toggle" class="navbar__icon">☰</label>
+    <ul class="navbar__links">
+      <li><a href="">Inicio</a></li>
+      <li><a href="">Animales</a></li>
+      <li><a href="">Donaciones</a></li>
+    </ul>
+  </nav>
+ <!--CARRUSEL-->
+<div class="carousel-container">
+  <div class="carousel" id="carousel">
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Jaguar">
+      <div class="caption">Tigre rescatado en 2023</div>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Tucán">
+      <div class="caption">Tucán recuperado tras tráfico ilegal</div>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Mono">
+      <div class="caption">Mono liberado en hábitat protegido</div>
+    </div>
+      <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Mono">
+      <div class="caption">Mono liberado en hábitat protegido</div>
+    </div>
+  </div>
+</div>
+
+ 
+    
+  
+  <script>
+  const carousel = document.getElementById("carousel");
+  const slides = Array.from(carousel.children);
+
+  // Duplicamos las slides
+  slides.forEach(slide => {
+    const clone = slide.cloneNode(true);
+    carousel.appendChild(clone);
+  });
+
+  // Pausar/reanudar animación
+  let isPaused = false;
+
+  function pauseCarousel() {
+    isPaused = true;
+    carousel.style.animationPlayState = 'paused';
+  }
+
+  function resumeCarousel() {
+    isPaused = false;
+    carousel.style.animationPlayState = 'running';
+  }
+
+  carousel.addEventListener("mouseenter", pauseCarousel);
+  carousel.addEventListener("mouseleave", resumeCarousel);
+</script>
+
 </body>
 </html>
