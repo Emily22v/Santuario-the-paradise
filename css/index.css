@@ -110,7 +110,7 @@ font-weight: bold;
 
 .carousel {
   display: flex;
-  animation: scroll 15s linear infinite;
+  animation: scroll 5s linear infinite;
   width: max-content;
 }
 
@@ -149,6 +149,7 @@ border-radius: 10px;
     transform: translateX(-900px); /* 3 imágenes visibles * 300px */
   }
 }
+
 
 .slide {
   position: relative;
