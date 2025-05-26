@@ -182,7 +182,7 @@ border-radius: 10px;}
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-3000px); /* 10 imágenes originales */
+    transform: translateX(-6000px); /* 10 imágenes originales */
   }
 }
 
