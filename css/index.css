@@ -18,6 +18,30 @@ body {
   color: var(--text);
 }
 
+/*Bienvenida*/
+.bienvenida {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #eaf8ef; /* color de fondo suave */
+  border-radius: 12px;
+  text-align: center;
+  color: #2d4830;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #3a684a;
+}
+
+.bienvenida p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
 /* Navbar principal */
 .navbar {
   display: flex;
