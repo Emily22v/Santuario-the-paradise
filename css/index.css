@@ -170,18 +170,7 @@ body {
   object-fit: cover;
   background-color: #f0f0f0;
   flex-wrap: wrap;
-border-radius: 10px;
-}
-
-.caption {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-}
+border-radius: 10px;}
 
 .slide {
   flex-shrink: 0;
@@ -209,3 +198,28 @@ border-radius: 10px;
   border-radius: 5px;
   font-size: 1rem;
 }
+
+
+/*FOOTER*/
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+
