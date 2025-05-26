@@ -35,21 +35,20 @@ body {
   gap: 0.5rem;
   font-family: 'Courier New', Courier, monospace;
   font-size: 28px;
-font-weight: bold;
+  font-weight: bold;
 }
 
 .logo-icon {
   height: auto;
-  width: 150px;
+  width: 100px;
 }
 
 /* Ícono de menú hamburguesa */
 .navbar__icon {
-  font-size: 4rem;
+  font-size: 2.5rem;
   display: none;
   cursor: pointer;
   user-select: none;
-
 }
 
 /* Checkbox oculto */
@@ -75,24 +74,25 @@ font-weight: bold;
   color: var(--accent);
 }
 
-/* 🌐 Responsividad */
+/* 🌐 Responsivo */
 @media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
   .navbar__icon {
     display: block;
   }
 
   .navbar__links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     flex-direction: column;
+    width: 100%;
     background-color: var(--bg);
     display: none;
     padding: 1rem 2rem;
   }
 
-  .navbar__toggle:checked + .navbar__icon + .navbar__links {
+  .navbar__toggle:checked ~ .navbar__links {
     display: flex;
   }
 
@@ -100,7 +100,6 @@ font-weight: bold;
     margin-bottom: 1rem;
   }
 }
-
 /*Carrusel*/
 .carousel-container {
   width: 100vw;
