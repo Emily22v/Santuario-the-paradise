@@ -454,8 +454,17 @@ const animalData = {
             { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
         ],
         "Panteras":[
-            { name: "Liccy", img: "https://drive.google.com/uc?export=view&id=1WhYS6pDEUZ8VNDac6_-YBsGbzMlMhow2", age: "8 años", weight: "200 kg", gender: "Hembra", origin: "Londres", rescued: "2014-03-19" },
-            { name: "Emily", img: "https://drive.google.com/uc?export=download&id=1WHfgx8kX80kunsD3uFhDQB5PIELfFQ", age: "8 años", weight: "250 kg", gender: "Hembra", origin: "Nepal", rescued: "2014-04-22" }
+            { name: "Liccy", img: "leon1.jpg", age: "8 años", weight: "200 kg", gender: "Hembra", origin: "Londres", rescued: "2014-03-19" },
+            { name: "Emily", img: "", age: "8 años", weight: "250 kg", gender: "Hembra", origin: "Nepal", rescued: "2014-04-22" },
+              { name: "", img: "https://i.postimg.cc/Bb1g4y7p/da377acddf01cdb9afbd021905faa242.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
+            { name: "Nina", img: "https://i.postimg.cc/MKQPSchw/1073137a8614ae7c14f7d57b1e03c5fe.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
+            { name: "Paco", img: "https://i.postimg.cc/vZwPHYsV/6bf5be2d7cb791d81ba0f3d16ca43719.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+                { name: "", img: "", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
+            { name: "Nina", img: "https://i.postimg.cc/ncJRnVZQ/58a693d612f434988815604a8037f25a.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
+            { name: "Paco", img: "https://i.postimg.cc/7hM63LTz/11d75cae4d1f44121d110ec4a2e4f05b.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+           { name: "", img: "", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
+            { name: "Nina", img: "", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
+            { name: "Paco", img: "", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
 
         ],
         "Jaguares":[
