@@ -1,16 +1,18 @@
+/* Reset básico */
+  
+      
 body {
     background-color: #7FB77E;
-    color: white;
-    font-family: Arial, sans-serif;
+    color: rgb(34, 95, 34);
     text-align: center;
-    padding: 20px;
     align-items: center;
+    margin: 0;
+      height: 100%;
 }
 
 
-
 .search-bar {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 input {
     padding: 10px;
@@ -29,8 +31,8 @@ input {
     border-radius: 10px;
     cursor: pointer;
     background-color: #478629;;
-    color: white;
-    font-size: 16px;
+    color: rgb(4, 94, 19);
+    font-size: 25px;
 }
 .filter-buttons button.active {
     background-color: #478629;
@@ -51,8 +53,10 @@ border-radius: 15px;
 padding: 15px;
 text-align: center;
 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-color: white;
+color: rgb(3, 75, 15);
 font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+margin: 15px;
 }
 .card img {
     width: 300px;
@@ -114,6 +118,8 @@ button:hover {
     flex-direction: column;
     align-items: center;
     color: #312a2a;
+    
+
 }
 
 .animal-detail-card img {
@@ -247,4 +253,90 @@ button:hover {
     word-break: break-word;
     margin: 0;
   }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .filter-buttons button,
+    .contenedor-botones button {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .animal-detail-card {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .animal-detail-card img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__links {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar__links a {
+        font-size: 1.2rem;
+    }
+
+    .navbar__logo p {
+        font-size: 1.4rem;
+    }
+
+    button img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+/*FOOTER*/
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.footer-content {
+  max-width:1200px ;
+ 
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.95rem;
 }
