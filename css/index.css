@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-  --bg: #E6F4EA;
-  --text: #4E3D2C;
-  --accent: #7FB77E;
+  --bg: #7FB77E;
+  --text: rgb(34, 95, 34);
+  --accent: #71ac70;
 }
 
 /* Reset básico */
@@ -13,9 +13,13 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+    background-color: #7FB77E;
+    color: rgb(34, 95, 34);
+   
+    text-align: center;
+    align-items: center;
+    margin: 0;
+      height: 100%;
 }
 
 /*Bienvenida*/
@@ -23,11 +27,11 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #eaf8ef; /* color de fondo suave */
+  background-color: #a6dbb9; /* color de fondo suave */
   border-radius: 12px;
   text-align: center;
   color: #2d4830;
-  font-family: 'Segoe UI', sans-serif;
+ font-family: 'Courier New', Courier, monospace;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,6 +54,7 @@ body {
   padding: 1rem 2rem;
   background-color: var(--bg);
   position: relative;
+
 }
 
 /* Logo */
@@ -94,6 +99,11 @@ body {
   transition: color 0.3s;
 }
 
+a:hover{
+        background-color: #0e8f39;
+        border-radius: 10px;
+        padding: 5px;
+}
 .navbar__links a:hover {
   color: var(--accent);
 }
@@ -125,6 +135,7 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
   .navbar__logo {
     flex-direction: column;
@@ -153,7 +164,7 @@ body {
 
 .carousel {
   display: flex;
-  animation: scroll 10s linear infinite;
+  animation: scroll 30s linear infinite;
   width: max-content;
 }
 

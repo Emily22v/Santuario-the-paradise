@@ -10,16 +10,6 @@
 </head>
 <body>
     <header>
-         <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navbar Responsive</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
 
   <nav class="navbar">
   <div class="navbar__logo">
@@ -32,12 +22,15 @@
 
   <ul class="navbar__links">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="#">Animales</a></li>
+    <li><a href="animales.html">Animales</a></li>
     <li><a href="#">Donaciones</a></li>
-    <li><a href="#">Comprar boletos</a></li>
+    <li><a href="#">Boletos</a></li>
+    <li><a href="">Información</a></li>
+    <li><a href="sugerencias.html">Sugerencias</a></li>
 
   </ul>
 </nav>
+    </header>
 <section class="bienvenida">
 <h2>¡BIENVENIDO/A A WILD PARADISE!</h2>
 <p>
@@ -96,19 +89,6 @@
       <div class="caption">Mono capuchino cariblanco rescatado de carretera en Colombia </div>
     </div>
 
-
-    <!--Más animales
-    Elefante
-    León
-    Hipopotamo
-    Axolote
-    Jirafa
-    Huron
-    Lobo
-    Cebras
-
-    -->
-
        <div class="slide">
       <img src="https://i.postimg.cc/Sj0zfKd7/625b33b4e46746edccabcd1c8b9b3dcf.jpg" alt="Elefante">
       <div class="caption">Elefante rescatado en Malasya, 2025 </div>
@@ -164,10 +144,11 @@
 
 
     <!-- Duplicados -->
-    <div class="slide">
-      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Jaguar">
-      <div class="caption">Tigre rescatado en 2023</div>
+   <div class="slide">
+      <img src="https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg" alt="Tigre">
+      <div class="caption">Tigre otorgado por refugio en 2023</div>
     </div>
+    
     <div class="slide">
       <img src="https://i.postimg.cc/g0jQPBzL/dd5a523ea17d53647553b83546c27a6b.jpg" alt="León marino">
       <div class="caption">León marino rescatado de tráfico ilegal.</div>
@@ -254,14 +235,13 @@
 
     <div class="slide">
       <img src="https://i.postimg.cc/sfpXf7tg/430b677b152d79525df5d718e24dfc6f.jpg" alt="Tortuga">
-      <div class="caption">Tortuga donado por Zoológico, 2021 </div>
+      <div class="caption">Tortuga rescatada por Zoológico, 2021 </div>
     </div>
 
   </div>
 </div>
 
- 
-    
+
   
   <script>
   const carousel = document.getElementById("carousel");
@@ -289,6 +269,7 @@
   carousel.addEventListener("mouseenter", pauseCarousel);
   carousel.addEventListener("mouseleave", resumeCarousel);
 </script>
+
 
 
 <footer>

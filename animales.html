@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales</title>
+    <link rel="stylesheet" href="./css/animales.css">
+</head>
+<body>
+     <header>
+
+  <nav class="navbar">
+  <div class="navbar__logo">
+    <img src="https://i.postimg.cc/hGQNPFrd/Chat-GPT-Image-24-may-2025-22-43-07-removebg-preview.png" alt="Ícono de animales salvajes" class="logo-icon">
+    <p>Wild Paradise</p>
+  </div>
+
+  <input type="checkbox" id="menu-toggle" class="navbar__toggle">
+  <label for="menu-toggle" class="navbar__icon">☰</label>
+
+  <ul class="navbar__links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="#">Donaciones</a></li>
+    <li><a href="#">Boletos</a></li>
+    <li><a href="">Información</a></li>
+    <li><a href="sugerencias.html">Sugerencias</a></li>
+
+  </ul>
+</nav>
+    </header>
+    
+    <h1>Animales del Santuario</h1>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Buscar animales..." onkeyup="filterAnimals()">
+    </div>
+<div class="filter-buttons" >
+        <div class="contenedor-botones">
+            <button onclick="toggleFilter('mamifero', this)">
+                Mamíferos terrestres
+            </button>
+        
+            <button onclick="toggleFilter('mamifero-marino', this)">
+               Mamíferos marinos
+            </button>
+
+            <button onclick="toggleFilter('marino', this)">
+             Marinos
+            </button>
+        
+            <button onclick="toggleFilter('ave', this)">
+            Aves
+            </button>
+        
+            <button onclick="toggleFilter('reptil', this)">
+             Reptiles
+            </button>
+            
+            <button onclick="toggleFilter('anfibio', this)">
+             Anfibios
+            </button>
+        </div>
+
+
+
+
+    
+    <div class="container" id="main-container">
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Leones')">
+            <img src="https://i.postimg.cc/nV44Z5dS/Leones-card.jpg" alt="Leones">
+            <h3>Leones</h3>
+
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Tigres')">
+            <img src="https://i.postimg.cc/L8XLtsmG/tigre-card.jpg" alt="Tigres">
+            <h3>Tigres</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero"  onclick="showAnimalDetails('Elefantes')">
+            <img src="https://i.postimg.cc/vZYW2BXQ/elefantes-card.jpg" alt="Elefantes">
+            <h3>Elefantes</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero"onclick="showAnimalDetails('Osos')" >
+            <img src="https://i.postimg.cc/9MG7mRBw/oso-card.jpg" alt="Osos">
+            <h3>Osos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Lobos')">
+            <img src="https://i.postimg.cc/Hnd7VYSZ/lobos-card.jpg" alt="Lobos">
+            <h3>Lobos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Zorros')">
+            <img src="https://i.postimg.cc/4N49G3Hn/zorros-card.jpg" alt="Zorros">
+            <h3>Zorros</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Jirafas')">
+            <img src="https://i.postimg.cc/4xmHKF5g/jirafas-card.jpg" alt="Jirafas">
+            <h3>Jirafas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Hipopótamos')">
+            <img src="https://i.postimg.cc/C1pcr02S/hipopotamos-card.jpg" alt="Hipopótamos">
+            <h3>Hipopótamos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Rinocerontes')">
+            <img src="https://i.postimg.cc/fLjVn4wx/rinocerontes-card.jpg" alt="Rinocerontes">
+            <h3>Rinocerontes</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Cebras')">
+            <img src="https://i.postimg.cc/HkySHjXb/cebras-card.jpg" alt="Cebras">
+            <h3>Cebras</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Búfalos')">
+            <img src="https://i.postimg.cc/768rDp5Z/bufalo-card.jpg" alt="Búfalos">
+            <h3>Búfalos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Camellos')">
+            <img src="https://i.postimg.cc/gj2SPDH0/camellos-card.jpg" alt="Camellos">
+            <h3>Camellos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Canguros')">
+            <img src="https://i.postimg.cc/sxHnfhT4/canguro-card.jpg" alt="Canguros">
+            <h3>Canguros</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Pandas')">
+            <img src="https://i.postimg.cc/zvzVqdB4/panda-card.jpg" alt="Pandas">
+            <h3>Pandas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Chimpancé')">
+            <img src="https://i.postimg.cc/KYh0YFDw/chimpance-card.jpg" alt="Chimpancé">
+            <h3>Chimpancé</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Gorilas')">
+            <img src="https://i.postimg.cc/htn1TsN3/gorila-card.jpg" alt="Gorilas">
+            <h3>Gorilas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Koala')">
+            <img src="https://i.postimg.cc/KvsRyDys/koala2-card.jpg" alt="Koala">
+            <h3>Koala</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Ciervo')">
+            <img src="https://i.postimg.cc/ZqmLSHTh/aa53bb28cc02f592447f77c6d17f5a13.jpg" alt="Ciervo">
+            <h3>Ciervo</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Conejos')">
+            <img src="https://i.postimg.cc/fRNHzDKF/conejo-card.jpg" alt="Conejos">
+            <h3>Conejos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Erizos')">
+            <img src="https://i.postimg.cc/7Pzdws45/erizos-card.jpg" alt="Erizos">
+            <h3>Erizos</h3>
+        </div>
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Puercoespín')">
+                <img src="https://i.postimg.cc/FFPGLw4W/4ad927871818776bfa456054aadacc7f.jpg" alt="Puercoespín">
+                <h3>Puercoespín</h3>
+        
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Armadillo')">
+            <img src="https://i.postimg.cc/P5p7xSsp/armadillos-card.jpg" alt="Armadillo">
+            <h3>Armadillo</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Perezosos')">
+            <img src="https://i.postimg.cc/85HzXhH4/perezoso-card.jpg" alt="Perezosos">
+            <h3>Perezosos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Mapaches')">
+            <img src="https://i.postimg.cc/BQtnNP15/mapache-card.jpg" alt="Mapaches">
+            <h3>Mapaches</h3>
+            
+        </div>
+        
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Hurones')">
+            <img src="https://i.postimg.cc/tJ0rsxP3/c27f92b4e30c0c07043f8dd50e7fbb5a.jpg" alt="Hurones">
+            <h3>Hurones</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Capybara')">
+            <img src="https://i.postimg.cc/4yPD6yBY/capybara.jpg" alt="Capybara">
+            <h3>Capybara</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Castores')">
+            <img src="https://i.postimg.cc/BZm7BrJP/castores-card.jpg" alt="Castores">
+            <h3>Castores</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Suricatas')">
+            <img src="https://i.postimg.cc/0Q88Szsw/Suricatas-card.jpg" alt="Suricatas">
+            <h3>Suricatas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Lemur')">
+            <img src="https://i.postimg.cc/d3gP51zn/lemur-card.jpg" alt="Lemur">
+            <h3>Lemur</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Linces')">
+            <img src="https://i.postimg.cc/SxN3cc2q/linces-card.jpg" alt="Linces">
+            <h3>Linces</h3>
+            
+        </div>
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Tapir')">
+            <img src="https://i.postimg.cc/K8PS5mQr/tapir-card.jpg" alt="Tapir">
+            <h3>Tapir</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Gacelas')">
+            <img src="https://i.postimg.cc/brr7R8ML/gacelas-card.jpg" alt="Gacelas">
+            <h3>Gacelas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Alces')">
+            <img src="https://i.postimg.cc/fRPhq3ZX/alces-card.jpg" alt="Alces">
+            <h3>Alces</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Leopardos')">
+            <img src="https://i.postimg.cc/vTJcFGJH/50b2caebe04a1fae3e51c6290d3b4efa.jpg" alt="Leopardos">
+            <h3>Leopardos</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Pumas')">
+            <img src="https://i.postimg.cc/mDRrSdQh/pumas-card.jpg" alt="Pumas">
+            <h3>Pumas</h3>
+            
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Guepardos')">
+            <img src="https://i.postimg.cc/GtQGQwW7/guepardo-card.jpg" alt="Guepardos">
+            <h3>Guepardos</h3>
+            
+        </div>
+        
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Panteras')">
+            <img src="https://i.postimg.cc/8CY2psCG/4c0393305325df32817d31600327eecb.jpg" alt="Panteras">
+            <h3>Pantera negra</h3>
+            
+        </div>        
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Jabalí')">
+            <img src="https://i.postimg.cc/jjrhTbH5/ff875bcc81ce4b1cfcaf3b536d7cfce0.jpg" alt="Jabalí">
+            <h3>Jabalí</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Hiena')">
+            <img src="https://i.postimg.cc/wxbcvJXn/933e06e85ce67781cdeeaf7d375e88e6.jpg" alt="Hiena">
+            <h3>Hiena</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Tejón')">
+            <img src="https://i.postimg.cc/HLHbKtm8/1e743d06109beda1190ad7812b43e807.jpg" alt="Tejón">
+            <h3>Tejón</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Jaguar')">
+            <img src="https://i.postimg.cc/qMW84TsK/03ab9afb9ccd3fb2b9a8e5520224621c.jpg" alt="Jaguar">
+            <h3>Jaguar</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Gato montés')">
+            <img src="https://i.postimg.cc/SxXy40yw/6ab14abdfeeec906c854c2ea4c727a97.jpg" alt="Gato montés">
+            <h3>Gato montés</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Chinchilla')">
+            <img src="https://i.postimg.cc/50pBVQg9/3aad458c96e3ee0e6bbc111725f23bbb.jpg" alt="Chinchilla">
+            <h3>Chinchilla</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Comadreja')">
+            <img src="https://i.postimg.cc/3xvJQM1d/hurones-card.jpg" alt="Comadreja">
+            <h3>Comadreja</h3>
+        </div>
+
+      
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Cabra')">
+            <img src="https://i.postimg.cc/90ny43sv/a19fa8646148edf844583c01038d0b50.jpg" alt="Cabra">
+            <h3>Cabra</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Zarigüeya')">
+            <img src="https://i.postimg.cc/ZqsYzT3t/245ff1d7afdb9771aea38809afe0d56f.jpg" alt="">
+            <h3>Zarigüeya</h3>
+        </div>
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Liebre')">
+            <img src="https://i.postimg.cc/52nb8xsY/de2930a13c986dfda969c0e2edaeb255.jpg" alt="Liebre">
+            <h3>Liebre</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Okapi')">
+            <img src="https://i.postimg.cc/fkQTqBdV/6fae79aba39ee8f6b0fdd64625121a45.jpg" alt="Okapi">
+            <h3>Okapi</h3>
+        </div>
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Pangolín')">
+            <img src="https://i.postimg.cc/Wzb7FwzJ/9740d35ca5979b6e25f10f06fdef5bde.jpg" alt="Pangolín">
+            <h3>Pangolín</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Aye-Aye')">
+            <img src="https://i.postimg.cc/c4CmdhPp/22b72923b2e2e21a6276e8b47db4ed02.jpg" alt="Aye-Aye">
+            <h3>Aye-Aye</h3>
+        </div>
+
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Burdéguo')">
+            <img src="https://i.postimg.cc/cJ2hznFp/97af15b25375e26591dac53ece8be79e.jpg" alt="Burdéguo">
+            <h3>Burdéguo</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Ocelote')">
+            <img src="https://i.postimg.cc/mkCH8dDn/Ocelot-LC.jpg" alt="Ocelote">
+            <h3>Ocelote</h3>
+        </div>
+        <div class="card" data-category="mamifero" onclick="showAnimalDetails('Jaguarundi')">
+            <img src="" alt="Jaguarundi">
+            <h3>Jaguarundi</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+    
+
+        <div class="card" data-category="anfibio" onclick="showAnimalDetails('Axolote')">
+            <img src="https://i.postimg.cc/3J2XBw0w/315929d5e034a614ca7128d58e7c2652.jpg" alt="Axolote">
+            <h3>Axolote</h3>
+        </div>
+
+
+    
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Belugas')">
+            <img src="https://i.postimg.cc/6qpQGYZR/belugas-card.jpg" alt="Belugas">
+            <h3>Belugas</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Orcas')">
+            <img src="https://i.postimg.cc/X7XJj146/orcas-card.jpg" alt="Orcas">
+            <h3>Orcas</h3>
+        </div>
+
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Narval')">
+            <img src="https://i.postimg.cc/pdMXB28P/narval-card.jpg" alt="Narval">
+            <h3>Narval</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Leones marinos')">
+            <img src="https://i.postimg.cc/0NG5WLdD/Leones-marinos-card.jpg" alt="Leones marinos">
+            <h3>Leones marinos</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Morsa')">
+            <img src="https://i.postimg.cc/x8Z9NYnD/morsa-card.jpg" alt="Morsa">
+            <h3>Morsa</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Nutrias')">
+            <img src="https://i.postimg.cc/v82YN79q/Nutrias-card.jpg" alt="Nutrias">
+            <h3>Nutrias</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Dugongo')">
+            <img src="https://i.postimg.cc/T3gT1ZsF/Dugongo-card.jpg" alt="Dugongo">
+            <h3>Dugongo</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Manatí del Caribe')">
+            <img src="https://i.postimg.cc/QMDhTfGt/Manat-del-Caribe-card.jpg" alt="Manatí del Caribe">
+            <h3>Manatí del Caribe</h3>
+        </div>
+        <div class="card" data-category="mamifero-marino" onclick="showAnimalDetails('Lobos marinos')">
+            <img src="https://i.postimg.cc/m2FspvTk/Lobos-marinos-card.jpg" alt="Lobos marinos">
+            <h3>Lobos marinos</h3>
+        </div>
+
+    
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Delfines')">
+            <img src="https://i.postimg.cc/BnTG42LG/delfines-card.jpg" alt="Delfines">
+            <h3>Delfines</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Raya')">
+            <img src="https://i.postimg.cc/Dz5kbFPj/528fb19037a5d47d2b01b00b8688e3aa.jpg" alt="Raya">
+            <h3>Raya</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Manta raya')">
+            <img src="https://i.postimg.cc/pd5cPH15/1fa953667dc77a4703ed388755c59a0d.jpg" alt="Manta raya">
+            <h3>Manta raya</h3>
+        </div>
+
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Pez payaso')">
+            <img src="https://i.postimg.cc/Qt2HvpKW/Pez-payaso-card.jpg" alt="Pez payaso">
+            <h3>Pez payaso</h3>
+        </div>
+
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Pez espada')">
+            <img src="https://i.postimg.cc/Y0Qh7hQD/Pez-espada-card.jpg" alt="Pez espada">
+            <h3>Pez espada</h3>
+        </div>
+
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Pez luna')">
+            <img src="https://i.postimg.cc/9X94ZNsP/Pez-luna-card.jpg" alt="Pez luna">
+            <h3>Pez luna</h3>
+        </div>
+
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Pulpo gigante del Pacífico')">
+            <img src="https://i.postimg.cc/CLVRNsV3/Pulpo-gigante-del-Pac-fico-card.jpg" alt="Pulpo gigante del Pacífico">
+            <h3>Pulpo gigante del Pacífico </h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Calamar')">
+            <img src="https://i.postimg.cc/RVQNbJSN/Calamar-card.jpg" alt="Calamar">
+            <h3>Calamar</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Cangrejo violinista')">
+            <img src="https://i.postimg.cc/5246c9yp/Cangrejo-violinista-card.jpg" alt="Cangrejo violinista">
+            <h3>Cangrejo violinista</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Estrella de mar girasol')">
+            <img src="https://i.postimg.cc/XYsXnMyW/Estrella-de-mar-girasol-card.jpg" alt="Estrella de mar girasol">
+            <h3>Estrella de mar girasol </h3>
+        </div>
+
+        
+       
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Tortugas marinas')">
+            <img src="https://i.postimg.cc/g0p4bZRQ/Tortugas-marinas-card.jpg" alt="Tortugas marinas">
+            <h3>Tortugas marinas</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Medusa luna')">
+            <img src="https://i.postimg.cc/rpCTqxHr/Medusa-luna-card.jpg" alt="Medusa luna">
+            <h3>Medusa luna</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Anémona de mar gigante')">
+            <img src="https://i.postimg.cc/yx54LPDw/An-mona-de-mar-gigante-card.jpg" alt="Anémona de mar gigante">
+            <h3>Anémona de mar gigante </h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Pez volador')">
+            <img src="https://i.postimg.cc/ryYky8fQ/Pez-volador-card.jpg" alt="Pez volador">
+            <h3>Pez volador </h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Tiburones')">
+            <img src="https://i.postimg.cc/DzYWPV26/Tibur-n-blanco-card.jpg" alt="Tiburones">
+            <h3>Tiburones</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Caballito de mar')">
+            <img src="https://i.postimg.cc/PxrghcZg/Caballito-de-mar-CARD.jpg" alt="Caballito de mar">
+            <h3>Caballito de mar </h3>
+        </div>
+
+
+
+
+       
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Águilas')">
+            <img src="https://i.postimg.cc/FK8Ytzr2/guilas-card.jpg" alt="Águilas">
+            <h3>Águilas</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Avestruz')">
+            <img src="https://i.postimg.cc/50SkHm5w/avestruz-card.jpg" alt="Avestruz">
+            <h3>Avestruz</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Búhos')">
+            <img src="https://i.postimg.cc/XqN19yxt/buho-card.jpg" alt="Búhos">
+            <h3>Búhos</h3>
+        </div>
+        <div class="card" data-category="marino" onclick="showAnimalDetails('Lirio de mar')">
+            <img src="https://i.postimg.cc/FzPWpsBz/lechuza-card.jpg" alt="Lirio de mar">
+            <h3>Lechuza</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Buitres')">
+            <img src="https://i.postimg.cc/VNjKTFV3/buitre-card.jpg" alt="Buitres">
+            <h3>Buitres</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Canario')">
+            <img src="https://i.postimg.cc/59kSsGtX/Canario-card.jpg" alt="Canario">
+            <h3>Canario</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Cardenal rojo')">
+            <img src="https://i.postimg.cc/h4pc68Fz/Cardenal-rojo-card.jpg" alt="Cardenal rojo">
+            <h3>Cardenal rojo</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Cigüeñas')">
+            <img src="https://i.postimg.cc/pLnvmgmz/Cig-e-as-card.jpg" alt="Cigüeñas">
+            <h3>Cigüeñas</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Cóndor')">
+            <img src="https://i.postimg.cc/mrYGwCNr/C-ndor-card.jpg" alt="Cóndor">
+            <h3>Cóndor</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Colibrí')">
+            <img src="https://i.postimg.cc/yNzMkW4C/Colibr-card.jpg" alt="Colibrí">
+            <h3>Colibrí</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Cuervos')">
+            <img src="https://i.postimg.cc/3R8zF6xL/Cuervos-card.jpg" alt="Cuervos">
+            <h3>Cuervos</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Faisán dorado')">
+            <img src="https://i.postimg.cc/ryY75fXJ/Fais-n-dorado-card.jpg" alt="Faisán dorado">
+            <h3>Faisán dorado</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Flamenco rosado')">
+            <img src="https://i.postimg.cc/dtkp6GJK/Flamenco-rosado-card.jpg" alt="Flamenco rosado">
+            <h3>Flamenco rosado</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Gallina de Guinea')">
+            <img src="https://i.postimg.cc/L6c7bhsg/Gallina-de-Guinea-card.jpg" alt="Gallina de Guinea">
+            <h3>Gallina de Guinea</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Garza')">
+            <img src="https://i.postimg.cc/SKqPm5Cy/Garza-Real-card.jpg" alt="Garza">
+            <h3>Garza</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Gorrión')">
+            <img src="https://i.postimg.cc/V6kHCCKp/gorrion-card.jpg" alt="Gorrión">
+            <h3>Gorrión</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Kiwi')">
+            <img src="https://i.postimg.cc/TwNNq3Sw/Kiwi-card.jpg" alt="Kiwi">
+            <h3>Kiwi</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Loro')">
+            <img src="https://i.postimg.cc/HnfSRPT1/loro-card.jpg" alt="Loro">
+            <h3>Loro</h3>
+        </div>
+  
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Pericos')">
+            <img src="https://i.postimg.cc/dt5Rhxbs/7fea47358238040e686d80fda3e57253.jpg" alt="Pericos">
+            <h3>Pericos</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Pato')">
+            <img src="https://i.postimg.cc/Zqd6DKCn/Pato-card.jpg" alt="Pato">
+            <h3>Pato</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Pavo real')">
+            <img src="https://i.postimg.cc/fbHBsZ9Y/Pavo-real-card.jpg" alt="Pavo real">
+            <h3>Pavo real</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Pelícano')">
+            <img src="https://i.postimg.cc/tTdWpSdH/pelicano-card.jpg" alt="Pelícano">
+            <h3>Pelícano</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Pingüino emperador')">
+            <img src="https://i.postimg.cc/ZYVvHyVj/Ping-ino-emperador-card.jpg" alt="Pingüino emperador">
+            <h3>Pingüino emperador</h3>
+        </div>
+
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Guacamayas')">
+            <img src="https://i.postimg.cc/zXvbcXQN/Guacamayas-card.jpg" alt="Guacamayas">
+            <h3>Guacamayas</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Cacatúas')">
+            <img src="https://i.postimg.cc/SK6JMXn6/Cacat-as-card.jpg" alt="Cacatúas">
+            <h3>Cacatúas</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Tucanes')">
+            <img src="https://i.postimg.cc/5210M47j/Tucanes-card.jpg" alt="Tucanes">
+            <h3>Tucanes</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Quetzal')">
+            <img src="https://i.postimg.cc/2598v4zB/quetzal-card.jpg" alt="Quetzal">
+            <h3>Quetzal</h3>
+        </div>
+        <div class="card" data-category="ave" onclick="showAnimalDetails('Emú')">
+            <img src="https://i.postimg.cc/rwFGg3Db/Em-card.jpg" alt="Emú">
+            <h3>Emú</h3>
+        </div>
+
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+        <div class="card" data-category="" onclick="showAnimalDetails('')">
+            <img src="" alt="">
+            <h3>NO ASIGNADO</h3>
+        </div>
+
+
+
+
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Serpientes')">
+            <img src="https://i.postimg.cc/pd3DWdsb/serpientes-card.jpg" alt="Serpientes">
+            <h3>Serpientes</h3>
+        </div>
+
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Dragón de Komodo')">
+            <img src="https://i.postimg.cc/FzVcVVNN/Drag-n-de-Komodo-card.jpg" alt="Dragón de Komodo">
+            <h3>Dragón de Komodo</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Iguanas')">
+            <img src="https://i.postimg.cc/15MwgBvK/iguana-card.jpg" alt="Iguanas">
+            <h3>Iguanas</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Camaleones')">
+            <img src="https://i.postimg.cc/yN3ZbHsf/Camaleones-card.jpg" alt="Camaleones">
+            <h3>Camaleones</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Geckos')">
+            <img src="https://i.postimg.cc/76v2vWLq/Geckos-card.jpg" alt="Geckos">
+            <h3>Geckos</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Lagartos')">
+            <img src="https://i.postimg.cc/43cY1QQq/Lagarto-Overo-card.jpg" alt="Lagartos">
+            <h3>Lagartos</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Tortugas')">
+            <img src="https://i.postimg.cc/BZpXN62S/Tortugas-terrestres-card.jpg" alt="Tortugas">
+            <h3>Tortugas terrestres</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Cocodrilos')">
+            <img src="https://i.postimg.cc/7YQb8WBj/Cocodrilos-card.jpg" alt="Cocodrilos">
+            <h3>Cocodrilos</h3>
+        </div>
+
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Caimanes')">
+            <img src="https://i.postimg.cc/YSQSFqpw/caiman-card.jpg" alt="Caimanes">
+            <h3>Caimanes</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Basilisco esmeralda')">
+            <img src="https://i.postimg.cc/9MWcqd8G/basilisco-esmeralda-card.jpg" alt="Basilisco esmeralda">
+            <h3>Basilisco esmeralda</h3>
+        </div>
+        <div class="card" data-category="reptil" onclick="showAnimalDetails('Gavial malayo')">
+            <img src="https://i.postimg.cc/2j9CVB4Z/gavial-malayo-card.jpg" alt="Gavial malayo">
+            <h3>Gavial malayo</h3>
+        </div>
+        
+       
+    </div>
+
+   
+
+    <!-- Contenedor de detalles (se oculta inicialmente) -->
+    <div id="details-container" style="display: none;">
+        <button onclick="goBack()">🔙 Volver</button>
+        <h2 id="animal-title"></h2>
+        <div id="animal-list" class="container"></div>
+    </div>
+   
+
+
+    <script>
+        let activeFilters = [];
+
+        function filterAnimals() {
+            let searchValue = document.getElementById("search").value.toLowerCase();
+            let cards = document.querySelectorAll(".card");
+
+            cards.forEach(card => {
+                let title = card.querySelector("h3").innerText.toLowerCase();
+                let category = card.getAttribute("data-category");
+
+                let matchesSearch = title.includes(searchValue);
+                let matchesFilter = activeFilters.length === 0 || activeFilters.includes(category);
+
+                card.style.display = (matchesSearch && matchesFilter) ? "block" : "none";
+            });
+        }
+
+        function toggleFilter(category, button) {
+    // Limpiar los filtros previos y asignar el nuevo
+    activeFilters = [category];
+
+    // Quitar la clase "active" de todos los botones
+    let buttons = document.querySelectorAll(".filter-buttons button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    // Agregar la clase "active" solo al botón seleccionado
+    button.classList.add("active");
+
+    // Aplicar el filtro
+    filterAnimals();
+}
+    </script>
+ <script src="script.js"></script>
+
+
+ 
+ <footer>
+  <div class="footer-content">
+    <p>© 2019 - 2025 Santuario Wild Paradise. Todos los derechos reservados.</p>
+    <p>Ubicados en un refugio natural dedicado a la protección y bienestar animal.</p>
+  </div>
+</footer>
+
+</body>
+</html>
