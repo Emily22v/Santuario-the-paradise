@@ -1043,36 +1043,61 @@ const animalData = {
 
 
     // Mostrar los animales
-    animalData[animal].forEach(item => {
-        const div = document.createElement("div");
-        div.classList.add("card");
+animalData[animal].forEach(item => {
+    const card = document.createElement("div");
+    card.classList.add("card", "animal-detail-card");
 
-        const img = document.createElement("img");
-        img.src = item.img;
-        img.alt = item.name;
+    const inner = document.createElement("div");
+    inner.classList.add("card-inner");
 
-        const h3 = document.createElement("h3");
-        h3.innerText = item.name;
+    // --- Cara frontal con imagen y tabla ---
+    const front = document.createElement("div");
+    front.classList.add("card-face", "card-front");
 
-    
-            // Crear la tabla de información
-            const table = `
-                <table class="animal-table">
-                    <tr><th>Edad</th><td>${item.age}</td></tr>
-                    <tr><th>Peso</th><td>${item.weight}</td></tr>
-                    <tr><th>Sexo</th><td>${item.gender}</td></tr>
-                    <tr><th>Origen</th><td>${item.origin}</td></tr>
-                    <tr><th>En el Zoo desde:</th><td>${item.rescued}</td></tr>
-                </table>
-            `;
-    
-            div.appendChild(img);
-            div.appendChild(h3);
-            div.innerHTML += table;
-            div.classList.add("card", "animal-detail-card"); 
-            animalList.appendChild(div);
-           
-        });
+    const img = document.createElement("img");
+    img.src = item.img;
+    img.alt = item.name;
+
+    const h3 = document.createElement("h3");
+    h3.innerText = item.name;
+
+    const table = document.createElement("table");
+    table.classList.add("animal-table");
+    table.innerHTML = `
+        <tr><th>Edad</th><td>${item.age}</td></tr>
+        <tr><th>Peso</th><td>${item.weight}</td></tr>
+        <tr><th>Sexo</th><td>${item.gender}</td></tr>
+        <tr><th>Origen</th><td>${item.origin}</td></tr>
+        <tr><th>En el Zoo desde:</th><td>${item.rescued}</td></tr>
+    `;
+
+    front.appendChild(img);
+    front.appendChild(h3);
+    front.appendChild(table);
+
+    // --- Cara trasera con info extra ---
+    const back = document.createElement("div");
+    back.classList.add("card-face", "card-back");
+
+    const infoExtra = document.createElement("p");
+    infoExtra.innerText = `Este es ${item.name}, un ejemplar originario de ${item.origin}, con ${item.age} años.`;
+
+    back.appendChild(infoExtra);
+
+    // --- Unir caras a la tarjeta interna ---
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+
+    // Evento de giro al hacer clic
+    card.addEventListener("click", () => {
+        inner.classList.toggle("flipped");
+    });
+
+    animalList.appendChild(card);
+});
+
+
     }
     
     // Volver a la vista principal

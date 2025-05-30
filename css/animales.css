@@ -45,25 +45,56 @@ justify-content: center;
 gap: 20px; /* Espacio entre tarjetas */
 }
 
+/*MOVIMIENTO DE CARDS*/
 .card {
-    width: 300px;
-    height: 230px;
-background-color: #65a04a;
-border-radius: 15px;
-padding: 15px;
-text-align: center;
-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-color: rgb(3, 75, 15);
-font-family: 'Courier New', Courier, monospace;
-font-size: 20px;
-margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
 }
-.card img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+background: linear-gradient(45deg, #88c057, #58a55c, #397d54);
+
+    z-index: -1;
+    transform: scale(1.05);
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
 
 .card h3 {
     margin: 10px 0;
@@ -107,28 +138,7 @@ button:hover {
     background-color: #357aa5;
 }
 
-.animal-detail-card {
-    background-color: #65a04a; 
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 320px; /* Ajusta según lo que necesites */
-    height: auto; /* Para que se expanda según el contenido */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #312a2a;
-    
 
-}
-
-.animal-detail-card img {
-    width: 100%;
-    height: 400px; /* Ajusta para que la imagen sea más vertical */
-    object-fit: cover; /* Mantiene proporciones sin deformar */
-    border-radius: 10px;
-    
-}
 
 @media (max-width: 768px) {
     ul {
@@ -339,4 +349,152 @@ footer {
 .footer-content p {
   margin: 5px 0;
   font-size: 0.95rem;
+}
+
+
+.card {
+    width: 300px;
+    height: 230px;
+background-color: #65a04a;
+border-radius: 15px;
+padding: 15px;
+text-align: center;
+box-shadow: 3px 3px 10px rgba(16, 131, 22, 0.3);
+color: rgb(3, 75, 15);
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+margin: 15px;
+
+}
+.card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.animal-detail-card {
+  width: 300px;
+  height: 550px; /* Más alto para imagen y contenido */
+  perspective: 1000px;
+  margin: 15px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Cara frontal */
+.card-front {
+  background-color: white;
+  z-index: 2;
+}
+
+.card-front img {
+  width: 100%;
+  height: 350px; /* Imagen más grande */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-front h3 {
+  margin: 10px 0 5px;
+}
+
+/* Tabla */
+.animal-table {
+  font-family: monospace;
+  font-size: 15px; /* Más pequeño para que entre */
+  margin-top: 5px;
+  width: 100%;
+  border-collapse: collapse;
+  word-break: break-word;
+}
+
+.animal-table th {
+  text-align: left;
+  padding-right: 5px;
+  vertical-align: top;
+  line-height: 1.2;
+}
+
+/* Cara trasera */
+.card-back {
+  background-color: #4caf50;
+  color: white;
+  transform: rotateY(180deg);
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para tarjetas base (decorativas) */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #88c057, #58a55c, #397d54);
+  z-index: -1;
+  transform: scale(1.05);
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
