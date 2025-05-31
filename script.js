@@ -1,85 +1,86 @@
 const animalData = {
     
         "Leones": [
-            { name: "Simba", img: "https://i.postimg.cc/g0MhMNjD/1f339afeb6840c1993444fa6fbfa2a74.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Nala", img: "https://i.postimg.cc/k4DbC7sr/a00f6dd6c018a4dc6002e093e3bec72f.jpg", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Simba", img: "https://i.postimg.cc/g0MhMNjD/1f339afeb6840c1993444fa6fbfa2a74.jpg", especie: "Panthera leo",age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15",rescueReason: "donado por zoológico", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Nala", img: "https://i.postimg.cc/k4DbC7sr/a00f6dd6c018a4dc6002e093e3bec72f.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "criada en el santuario en condiciones dignas y sanas", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Kiara", img: "https://i.postimg.cc/xC7bTBpX/80b89aedd32bf55bf93777d08baabe45.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra"},
-            { name: "Kovu", img: "https://i.postimg.cc/43wKqpk4/0b108eac95db2f9241356cad8bc06c80.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Kenny", img: "https://i.postimg.cc/GmhW3hg2/b399f3074f95b81f45b677b446402575.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra"},
+            { name: "Kiara", img: "https://i.postimg.cc/xC7bTBpX/80b89aedd32bf55bf93777d08baabe45.jpg", especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Kovu", img: "https://i.postimg.cc/43wKqpk4/0b108eac95db2f9241356cad8bc06c80.jpg", especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L2", clasificacion: "Carnívoro"  },
+            { name: "Kenny", img: "https://i.postimg.cc/GmhW3hg2/b399f3074f95b81f45b677b446402575.jpg", especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L2", clasificacion: "Carnívoro" },
 
-            { name: "Mufasa", img: "https://i.postimg.cc/yNqpRPqp/77a050fb70c5274662a335cd2106ff6b.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Sarabi", img: "https://i.postimg.cc/RZ7Wmd89/171a473ae6e98ff2ad21ec68764fb2f7.jpg", age: "7 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Mufasa", img: "https://i.postimg.cc/yNqpRPqp/77a050fb70c5274662a335cd2106ff6b.jpg", especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
+            { name: "Sarabi", img: "https://i.postimg.cc/RZ7Wmd89/171a473ae6e98ff2ad21ec68764fb2f7.jpg", especie: "Panthera leo", age: "7 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
             
 
-            { name: "Dexter", img: "https://i.postimg.cc/P5mM7Rqm/Dexter.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Snow", img: "https://i.postimg.cc/t46fDkP6/Snow.jpg", age: "4 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Rori", img: "https://i.postimg.cc/3N3dYGkR/Rori.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Dexter", img: "https://i.postimg.cc/P5mM7Rqm/Dexter.jpg", especie: "Panthera leo", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
+            { name: "Snow", img: "https://i.postimg.cc/t46fDkP6/Snow.jpg", especie: "Panthera leo", age: "4 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Rori", img: "https://i.postimg.cc/3N3dYGkR/Rori.jpg", especie: "Panthera leo", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Yuna", img: "https://i.postimg.cc/1X5YsnTm/8bb94ad27220f7c9053e9cd8345d2f3c.jpg", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Timba", img: "https://i.postimg.cc/CK9X4ChB/07e2559a1b7a231e9b7e33603dd479b4.jpg", age: "3 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Yuna", img: "https://i.postimg.cc/1X5YsnTm/8bb94ad27220f7c9053e9cd8345d2f3c.jpg", especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Timba", img: "https://i.postimg.cc/CK9X4ChB/07e2559a1b7a231e9b7e33603dd479b4.jpg", especie: "Panthera leo", age: "3 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Moyo", img: "https://i.postimg.cc/rsgDLQTh/459984b64631473aa75175bbb4597aee.jpg", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Amani", img: "https://i.postimg.cc/dVPhgp54/fbec36d2c3e238abfb046f409459e1f5.jpg", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Moyo", img: "https://i.postimg.cc/rsgDLQTh/459984b64631473aa75175bbb4597aee.jpg", especie: "Panthera leo", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
+            { name: "Amani", img: "https://i.postimg.cc/dVPhgp54/fbec36d2c3e238abfb046f409459e1f5.jpg", especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Scar", img: "https://i.postimg.cc/SxSd0x0d/da25cfb467da519b507a8268f767b73d.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Zira", img: "https://i.postimg.cc/FsffF0q7/a30a2f8a56af1df5fc5350c2960555e6.jpg", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Scar", img: "https://i.postimg.cc/SxSd0x0d/da25cfb467da519b507a8268f767b73d.jpg", especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Italia", rescued: "2021-05-20", rescueReason: "rescatado de un circo en Italia ", recinto:"L1", clasificacion: "Carnívoro"  },
+            { name: "Zira", img: "https://i.postimg.cc/FsffF0q7/a30a2f8a56af1df5fc5350c2960555e6.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Hembra", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Brutus", img: "https://i.postimg.cc/SsFjFrNC/Brutus.jpg", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Karl", img: "https://i.postimg.cc/Tw1xs5ng/Karl.jpg", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Brutus", img: "https://i.postimg.cc/SsFjFrNC/Brutus.jpg",especie: "Panthera leo", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Karl", img: "https://i.postimg.cc/Tw1xs5ng/Karl.jpg", especie: "Panthera leo", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Zeus", img: "https://i.postimg.cc/SxZTThz5/02369b6ad4230a9643cd40a2927fb806.jpg", age: "4 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Shira", img: "https://i.postimg.cc/52nqL4sG/5687d7c732d8e13f81cb9a9ef61ba276.jpg", age: "5 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
+            { name: "Zeus", img: "https://i.postimg.cc/SxZTThz5/02369b6ad4230a9643cd40a2927fb806.jpg",especie: "Panthera leo", age: "4 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
+            { name: "Shira", img: "https://i.postimg.cc/52nqL4sG/5687d7c732d8e13f81cb9a9ef61ba276.jpg",especie: "Panthera leo", age: "5 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Jengo", img: "https://i.postimg.cc/0yDdvgWt/2f098a906ff8b08b3e1404e5dc682330.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Zuri", img: "https://i.postimg.cc/wBxLbnBn/b11969762a688059515e559d2ad76a5d.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Jengo", img: "https://i.postimg.cc/0yDdvgWt/2f098a906ff8b08b3e1404e5dc682330.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Zuri", img: "https://i.postimg.cc/wBxLbnBn/b11969762a688059515e559d2ad76a5d.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
 
-            { name: "Kali", img: "https://i.postimg.cc/qMFNK9Pp/Male-Lion-Shumba-stunning-cat.jpg", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Imani", img: "https://i.postimg.cc/65NpLCS2/4180314487453dc50efe7f442b072b1a.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
+            { name: "Kali", img: "https://i.postimg.cc/qMFNK9Pp/Male-Lion-Shumba-stunning-cat.jpg",especie: "Panthera leo", age: "7 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
+            { name: "Imani", img: "https://i.postimg.cc/65NpLCS2/4180314487453dc50efe7f442b072b1a.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Jabari", img: "https://i.postimg.cc/XYr1C7jQ/bf46a25598f36211ec4c2f0902349c02.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Samira", img: "https://i.postimg.cc/pXBDMVMT/52d27b166ef4f0a0e3bab89be26ac8d2.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra"},
+            { name: "Jabari", img: "https://i.postimg.cc/XYr1C7jQ/bf46a25598f36211ec4c2f0902349c02.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
+            { name: "Samira", img: "https://i.postimg.cc/pXBDMVMT/52d27b166ef4f0a0e3bab89be26ac8d2.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Shujaa", img: "https://i.postimg.cc/PJ4HwmZ8/Shujaa.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Nadia", img: "https://i.postimg.cc/zBBvnrfX/917e110b70981f724df7dd8494201433.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Shujaa", img: "https://i.postimg.cc/PJ4HwmZ8/Shujaa.jpg", especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Nadia", img: "https://i.postimg.cc/zBBvnrfX/917e110b70981f724df7dd8494201433.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"},
 
-            { name: "Taji", img: "https://i.postimg.cc/ncV8j9Lq/Taji.jpg", age: "6 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Leonora", img: "https://i.postimg.cc/ZR3d74LJ/a3f2e79664b0c014115536e60491ca7f.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+            { name: "Taji", img: "https://i.postimg.cc/ncV8j9Lq/Taji.jpg",especie: "Panthera leo", age: "6 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Leonora", img: "https://i.postimg.cc/ZR3d74LJ/a3f2e79664b0c014115536e60491ca7f.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro" },
 
-            { name: "Rami", img: "https://i.postimg.cc/JhW00TM4/Rami.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra"},
-            { name: "Daphne", img: "https://i.postimg.cc/T2Vbn2w9/ed748a8fdd6ce2e7f16d08c3ea5261f4.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra"},
+            { name: "Rami", img: "https://i.postimg.cc/JhW00TM4/Rami.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1" },
+            { name: "Daphne", img: "https://i.postimg.cc/T2Vbn2w9/ed748a8fdd6ce2e7f16d08c3ea5261f4.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Amir", img: "https://i.postimg.cc/d0CSMYqV/6f9c7e1b103c3d88c4e12269dce983f3.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Chloe", img: "https://i.postimg.cc/tgD7ZTpM/917e110b70981f724df7dd8494201433.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+            { name: "Amir", img: "https://i.postimg.cc/d0CSMYqV/6f9c7e1b103c3d88c4e12269dce983f3.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"},
+            { name: "Chloe", img: "https://i.postimg.cc/MGNGkYGb/87b0152badccab22ae23803da89d7f1a.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Hercules", img: "https://i.postimg.cc/fbv4qrYF/fae1c4f9c772bccc1aafabba9b8806a1.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
-            { name: "Selene", img: "https://i.postimg.cc/jjnrzN3D/2e2fed93607177d29793f7729d31a526.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
+            { name: "Hercules", img: "https://i.postimg.cc/fbv4qrYF/fae1c4f9c772bccc1aafabba9b8806a1.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Selene", img: "https://i.postimg.cc/jjnrzN3D/2e2fed93607177d29793f7729d31a526.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Themis", img: "https://i.postimg.cc/ZRyX44RD/233cfda71d4443827b2af70b1fe3e64f.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Anika", img: "https://i.postimg.cc/DZVWbR3H/77ac5050a11b2e7df699f21013f0e107.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+            { name: "Themis", img: "https://i.postimg.cc/ZRyX44RD/233cfda71d4443827b2af70b1fe3e64f.jpg",especie: "Panthera leo", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15", rescueReason: "donado por zoológico en quiebra", recinto:"L1" , clasificacion: "Carnívoro"},
+            { name: "Anika", img: "https://i.postimg.cc/DZVWbR3H/77ac5050a11b2e7df699f21013f0e107.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Suryan", img: "https://i.postimg.cc/FKk3SvF4/Suryan.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" , rescueReason: "donado por zoológico en quiebra"},
-            { name: "Kiran", img: "https://i.postimg.cc/kXHp8yDK/049ca5c0a950d0deca1b4bf3f2abc2fe.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
+            { name: "Suryan", img: "https://i.postimg.cc/FKk3SvF4/Suryan.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Kiran", img: "https://i.postimg.cc/kXHp8yDK/049ca5c0a950d0deca1b4bf3f2abc2fe.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
 
-            { name: "Zulu", img: "https://i.postimg.cc/qMK08tfq/10004d88832543695256ab78338c06e5.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Thandi", img: "https://i.postimg.cc/Dz49MM42/e050731a25842c91ab9dedc570d12dd5.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Nayla", img: "https://i.postimg.cc/MKW8p5ND/307e3fdb4670f3ea73b9f273655ce37c.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Zulu", img: "https://i.postimg.cc/qMK08tfq/10004d88832543695256ab78338c06e5.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Thandi", img: "https://i.postimg.cc/Dz49MM42/e050731a25842c91ab9dedc570d12dd5.jpg", especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Nayla", img: "https://i.postimg.cc/MKW8p5ND/307e3fdb4670f3ea73b9f273655ce37c.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
 
-            { name: "Omar", img: "https://i.postimg.cc/RZLv0vFq/Omar.jpg", age: "5 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Penda", img: "https://i.postimg.cc/xCTHqf1T/38f998f1c8d8046293868aca88159717.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Omar", img: "https://i.postimg.cc/RZLv0vFq/Omar.jpg", especie: "Panthera leo", age: "5 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
+            { name: "Penda", img: "https://i.postimg.cc/xCTHqf1T/38f998f1c8d8046293868aca88159717.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "King", img: "https://i.postimg.cc/fyJ8shvg/7dc201d5e01e57b5213b2fbda2c54a88.jpg", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"},
-            { name: "Ariya", img: "https://i.postimg.cc/g0Gn2RFh/21c14258b05b5aa80faf1a235710353c.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "King", img: "https://i.postimg.cc/fyJ8shvg/7dc201d5e01e57b5213b2fbda2c54a88.jpg", especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Ariya", img: "https://i.postimg.cc/g0Gn2RFh/21c14258b05b5aa80faf1a235710353c.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Hunter", img: "https://i.postimg.cc/htVF79qP/18e2abbfa121446e6068700b556b5610.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" , rescueReason: "donado por zoológico en quiebra"},
-            { name: "Queen", img: "https://i.postimg.cc/4xW4gq3V/315f82e25c7563caf9a202cd0e962f7f.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Hunter", img: "https://i.postimg.cc/htVF79qP/18e2abbfa121446e6068700b556b5610.jpg",especie: "Panthera leo", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Queen", img: "https://i.postimg.cc/4xW4gq3V/315f82e25c7563caf9a202cd0e962f7f.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" , recinto:"L1" , clasificacion: "Carnívoro"},
 
-            { name: "Trueno", img: "https://i.postimg.cc/d3sbHw07/Trueno.jpg", age: "6 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Bella", img: "https://i.postimg.cc/kg0Mj8Yt/396e36191158ecae81206e65daf3ecba.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra" },
+            { name: "Trueno", img: "https://i.postimg.cc/d3sbHw07/Trueno.jpg",especie: "Panthera leo", age: "6 años", weight: "150 kg", gender: "Macho", origin: "Kenia", rescued: "2021-05-20",rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Bella", img: "https://i.postimg.cc/kg0Mj8Yt/396e36191158ecae81206e65daf3ecba.jpg", especie: "Panthera leo",age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20", rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro"  },
 
-            { name: "Titan", img: "https://i.postimg.cc/6pP6T9VL/1ecaca9179ac439c8f0a31b7196d644b.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" },
-            { name: "Asha", img: "https://i.postimg.cc/pVBXVw9y/8367f80dbbf9046c9d389ee961292f5d.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra"}
+            { name: "Titan", img: "https://i.postimg.cc/6pP6T9VL/1ecaca9179ac439c8f0a31b7196d644b.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "Asha", img: "https://i.postimg.cc/pVBXVw9y/8367f80dbbf9046c9d389ee961292f5d.jpg",especie: "Panthera leo", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" , rescueReason: "donado por zoológico en quiebra", recinto:"L1", clasificacion: "Carnívoro" },
+            { name: "King", img: "https://i.postimg.cc/Hkd9qS00/61e4648fd3e696bc9218376727cce785.jpg",especie: "Panthera leo", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10", rescueReason: "donado por zoológico en quiebra" , recinto:"L1", clasificacion: "Carnívoro" }
         ],
 
         "Tigres": [
@@ -202,164 +203,67 @@ const animalData = {
          
         ],
         "Chimpancé":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Gorilas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
+         
         ],
         "Koala":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Ciervo":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Conejos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Erizos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Armadillo":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Perezosos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Mapaches":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Hurones":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Castores":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
+    
         ],
         "Suricatas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Lemur":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
+           
         ],
         "Linces":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Tapir":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+        
         ],
         "Gacelas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+         
         ],
         "Alces":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Leopardos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Pumas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Guepardos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Panteras":[
             { name: "Liccy", img: "leon1.jpg", age: "8 años", weight: "200 kg", gender: "Hembra", origin: "Londres", rescued: "2014-03-19" },
@@ -368,112 +272,52 @@ const animalData = {
             { name: "Nina", img: "https://i.postimg.cc/MKQPSchw/1073137a8614ae7c14f7d57b1e03c5fe.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
             { name: "Paco", img: "https://i.postimg.cc/vZwPHYsV/6bf5be2d7cb791d81ba0f3d16ca43719.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
                 { name: "", img: "", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Nina", img: "https://i.postimg.cc/ncJRnVZQ/58a693d612f434988815604a8037f25a.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Paco", img: "https://i.postimg.cc/7hM63LTz/11d75cae4d1f44121d110ec4a2e4f05b.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
+            { name: "", img: "https://i.postimg.cc/ncJRnVZQ/58a693d612f434988815604a8037f25a.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
+            { name: "", img: "https://i.postimg.cc/7hM63LTz/11d75cae4d1f44121d110ec4a2e4f05b.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
            { name: "", img: "", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Nina", img: "", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Paco", img: "", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
 
         ],
         "Jaguares":[
-            { name: "Keira", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Neron", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
          "Jaguarundi":[
             { name: "Keira", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
             { name: "Neron", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" }
          ],
         "Delfines":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Belugas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+         
         ],
         "Orcas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Narval":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Leones marinos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Morsa":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Nutrias":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
+          
         ],
         "Dugongo":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Manatí del Caribe":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
+         
         ],
         "Lobos marinos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Tiburón blanco":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+         
         ],
         "Pez payaso":[
             { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
@@ -612,36 +456,16 @@ const animalData = {
             { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
         ],
         "Buitres":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Canario":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+         
         ],
         "Cardenal rojo":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Cigüeñas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Cóndor":[
             { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
@@ -738,28 +562,13 @@ const animalData = {
             { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
         ],
         "Pingüino emperador":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Guacamayas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Cacatúas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Tucanes":[
             { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
@@ -770,76 +579,31 @@ const animalData = {
             { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
         ],
         "Quetzal":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+        
         ],
         "Emú":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Serpientes":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Dragón de Komodo":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Iguanas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Camaleones":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Geckos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+           
         ],
         "Lagartos":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+          
         ],
         "Tortugas":[
-            { name: "Simba", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Mufasa", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Sarabi", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" },
-            { name: "Dexter", img: "leon1.jpg", age: "5 años", weight: "190 kg", gender: "Macho", origin: "África", rescued: "2020-03-15" },
-            { name: "Snow", img: "leon2.jpg", age: "8 años", weight: "210 kg", gender: "Macho", origin: "Sudáfrica", rescued: "2018-07-10" },
-            { name: "Nala", img: "leon3.jpg", age: "4 años", weight: "150 kg", gender: "Hembra", origin: "Kenia", rescued: "2021-05-20" }
+            
         ],
         "Cocodrilos":[
            
@@ -907,11 +671,14 @@ animalData[animal].forEach(item => {
     const table = document.createElement("table");
     table.classList.add("animal-table");
     table.innerHTML = `
+      <tr><th>Especie</th><td>${item.especie}</td></tr>
         <tr><th>Edad</th><td>${item.age}</td></tr>
-        <tr><th>Peso</th><td>${item.weight}</td></tr>
+       
         <tr><th>Sexo</th><td>${item.gender}</td></tr>
+         <tr><th>Recinto</th><td>${item.recinto}</td></tr>
         <tr><th>Origen</th><td>${item.origin}</td></tr>
-        <tr><th>En el Zoo desde:</th><td>${item.rescued}</td></tr>
+        
+        <tr><th>Clasificación </th><td>${item.clasificacion}</td></tr>
     `;
 
     front.appendChild(img);
@@ -924,13 +691,14 @@ cardBack.classList.add("card-face", "card-back");
 
 // Validar razón de rescate
 const rescueText = item.rescueReason 
-    ? `fue ${item.rescueReason}.` 
+    ? `fue ${item.rescueReason}` 
     : `no se ha registrado rescate`;
 
 const backContent = document.createElement("div");
 backContent.innerHTML = `
     <h2>${item.name}</h2>
-    <h3>${item.name} proviene de ${item.origin} y ${rescueText}</h3>
+    <h3>${item.name} proviene de ${item.origin}, y ${rescueText} en ${item.rescued}. </h3>
+    <h3>Su peso actual es: ${item.weight} </h3>
 `;
 
 cardBack.appendChild(backContent);

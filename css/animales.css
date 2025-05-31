@@ -302,7 +302,7 @@ margin: 15px;
 
 /* Cara frontal */
 .card-front {
-  background-color: white;
+  background-color: rgb(123, 194, 113);
   z-index: 2;
 }
 
