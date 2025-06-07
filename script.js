@@ -1,4 +1,4 @@
-const animalData = {
+let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     
  "Leones": [
  { nombre: "Simba",
@@ -9,7 +9,9 @@ const animalData = {
     origen: "Guatemala",
     fechaRescate: "2019-05-12",
     razonRescate: "Rescatado de un zoológico clausurado en Guatemala por maltrato animal",
-    recinto: "Sabana Norte"},
+    recinto: "Sabana Norte",
+  adopciones: 0
+},
 
  { nombre: "Nala", 
     img: "https://i.postimg.cc/k4DbC7sr/a00f6dd6c018a4dc6002e093e3bec72f.jpg",
@@ -19,7 +21,8 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2020-08-19",
     razonRescate: "Nacida en el santuario, hija de Simba y Zuri",
-    recinto: "Sabana Norte"
+    recinto: "Sabana Norte",
+    adopciones: 0
   },
 
              { nombre: "Kenny", 
@@ -32,6 +35,8 @@ const animalData = {
     fechaRescate: "2025-01-11",
     razonRescate: "Nacido en el santuario, hijo de Simba y Nala. Criado en condiciones dignas y sanas",
     recinto: "Zona A - León 1 y Guardería MAB"
+    ,
+  adopciones: 0
   },
 
             { nombre: "Kiara",
@@ -43,7 +48,9 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2021-05-20",
     razonRescate: "Nacida en el santuario, hija de Simba y Nala. Criada en condiciones dignas y sanas",
-    recinto: "Zona A - León 2"
+    recinto: "Zona A - León 2",
+  adopciones: 0
+    
   },
             { nombre: "Kovu",
      img: "https://i.postimg.cc/43wKqpk4/0b108eac95db2f9241356cad8bc06c80.jpg", 
@@ -54,7 +61,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatado del tráfico ilegal de animales",
-    recinto: "Zona A - León 2"
+    recinto: "Zona A - León 2",
+  adopciones: 0
   },
            
 
@@ -66,7 +74,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2019-03-04",
     razonRescate: "Confiscado en aduana tras intento de tráfico ilegal",
-    recinto: "Sabana Central"
+    recinto: "Sabana Central",
+  adopciones: 0
   },
    { nombre: "Sarabi",
      img: "https://i.postimg.cc/RZ7Wmd89/171a473ae6e98ff2ad21ec68764fb2f7.jpg", 
@@ -76,7 +85,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2019-03-04",
     razonRescate: "Confiscada junto a Mufasa en el mismo operativo",
-    recinto: "Sabana Central"
+    recinto: "Sabana Central",
+  adopciones: 0
   },
             
 
@@ -89,7 +99,8 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2020-03-15",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas. Criado junto a Snow",
-    recinto: "Zona A - León 4"
+    recinto: "Zona A - León 4",
+  adopciones: 0
   },
  { nombre: "Snow",
     img: "https://i.postimg.cc/t46fDkP6/Snow.jpg", 
@@ -100,7 +111,8 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2018-07-10",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas. Criado junto a Dexter",
-    recinto: "Zona A - León 4"
+    recinto: "Zona A - León 4",
+  adopciones: 0
   },
 
             { nombre: "Rori", 
@@ -112,7 +124,8 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2020-03-15",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas",
-    recinto: "Zona A - León 5"
+    recinto: "Zona A - León 5",
+  adopciones: 0
   },
 
             { nombre: "Yuna",
@@ -124,7 +137,8 @@ const animalData = {
     origen: "Panamá",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatada de un pueblo en Panamá",
-    recinto: "Zona A - León 5"
+    recinto: "Zona A - León 5",
+  adopciones: 0
   },
             { nombre: "Timba",
          img: "https://i.postimg.cc/CK9X4ChB/07e2559a1b7a231e9b7e33603dd479b4.jpg", 
@@ -135,7 +149,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas. Hijo de Yuna y Rori",
-    recinto: "Zona A - León 5"
+    recinto: "Zona A - León 5",
+  adopciones: 0
   },
 
             {
@@ -148,7 +163,8 @@ const animalData = {
     origen: "Italia",
     fechaRescate: "2020-03-15",
     razonRescate: "Rescatado de un circo de animales",
-    recinto: "Zona B - León 6"
+    recinto: "Zona B - León 6",
+  adopciones: 0
   },
             {
     nombre: "Amani",
@@ -160,7 +176,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Encontrada en un zoológico abandonado",
-    recinto: "Zona B - León 6"
+    recinto: "Zona B - León 6",
+  adopciones: 0
   },
 
           {
@@ -173,7 +190,8 @@ const animalData = {
     origen: "Italia",
     fechaRescate: "2021-05-20",
     razonRescate: "Rescatado de un circo en Brasil",
-    recinto: "Zona B - León 7"
+    recinto: "Zona B - León 7",
+  adopciones: 0
   },
   {
     nombre: "Zira",
@@ -185,7 +203,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Encontrada atrapada en una red de cazadores",
-    recinto: "Zona B - León 8"
+    recinto: "Zona B - León 8",
+  adopciones: 0
   },
    {
     nombre: "Brutus",
@@ -197,7 +216,8 @@ const animalData = {
     origen: "Ucrania",
     fechaRescate: "2020-03-15",
     razonRescate: "Traído por la guerra con Rusia",
-    recinto: "Zona B - León 9"
+    recinto: "Zona B - León 9",
+  adopciones: 0
   },
   {
     nombre: "Karl",
@@ -209,7 +229,8 @@ const animalData = {
     origen: "México",
     fechaRescate: "2020-03-15",
     razonRescate: "Encontrado en un rancho abandonado de narcotraficantes",
-    recinto: "Zona B - León 10"
+    recinto: "Zona B - León 10",
+  adopciones: 0
   },
 
   { nombre: "Zeus",
@@ -221,7 +242,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Fue hallado anestesiado dentro de una jaula a bordo de un avión",
-    recinto: "Zona Alfa - León 1"
+    recinto: "Zona Alfa - León 1",
+  adopciones: 0
   },
             { nombre: "Shira",
              img: "https://i.postimg.cc/52nqL4sG/5687d7c732d8e13f81cb9a9ef61ba276.jpg",
@@ -232,7 +254,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Fue hallada inmóvil a la orilla de un río, con las patas amarradas",
-    recinto: "Zona Delta - Refugio 3"
+    recinto: "Zona Delta - Refugio 3",
+  adopciones: 0
   },
 
             { nombre: "Jengo",
@@ -244,7 +267,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatado tras quedar huérfano debido a la caza ilegal de su madre",
-    recinto: "Nursery - Cuna 2"
+    recinto: "Nursery - Cuna 2",
+  adopciones: 0
   },
             {  nombre: "Zuri",
              img: "https://i.postimg.cc/wBxLbnBn/b11969762a688059515e559d2ad76a5d.jpg",
@@ -254,7 +278,9 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2019-07-21",
     razonRescate: "Rescatada tras ser abandonada por un circo ilegal en Kenia",
-    recinto: "Sabana Sur"},
+    recinto: "Sabana Sur",
+  adopciones: 0
+  },
 
 
   { nombre: "Kali",
@@ -265,7 +291,8 @@ const animalData = {
     origen: "Nicaragua",
     fechaRescate: "2021-06-14",
     razonRescate: "Hallada en una finca utilizada para tráfico ilegal de fauna exótica",
-    recinto: "Sabana Este"
+    recinto: "Sabana Este",
+  adopciones: 0
   },
             { nombre: "Imani",
              img: "https://i.postimg.cc/65NpLCS2/4180314487453dc50efe7f442b072b1a.jpg",
@@ -275,7 +302,8 @@ const animalData = {
     origen: "El Salvador",
     fechaRescate: "2021-11-02",
     razonRescate: "Nacida en el santuario, hija de Jengo y Kali",
-    recinto: "Sabana Este"
+    recinto: "Sabana Este",
+  adopciones: 0
   },
 
             { nombre: "Jabari",
@@ -287,7 +315,9 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Donado por un zoológico que cerró por falta de fondos",
-    recinto: "Territorio Este - Sector León 3"},
+    recinto: "Territorio Este - Sector León 3",
+  adopciones: 0
+  },
 
             { nombre: "Samira",
          img: "https://i.postimg.cc/qMrMHG1V/dabbf668a5e8ea60e0da2b0fa6032d12.jpg",
@@ -298,7 +328,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por un zoológico que no podía hacerse cargo de ella",
-    recinto: "Área Infantil - Guardería 1"
+    recinto: "Área Infantil - Guardería 1",
+  adopciones: 0
   },
 
             { nombre: "Shujaa",
@@ -310,7 +341,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Rescatado de un zoológico abandonado",
-    recinto: "Zona Norte - Hábitat León 4"
+    recinto: "Zona Norte - Hábitat León 4",
+  adopciones: 0
   },
             { nombre: "Nadia",
          img: "https://i.postimg.cc/zBBvnrfX/917e110b70981f724df7dd8494201433.jpg",
@@ -321,7 +353,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada tras cierre de zoológico sin licencia",
-    recinto: "Zona Norte - Hábitat León 4"
+    recinto: "Zona Norte - Hábitat León 4",
+  adopciones: 0
   },
 
             { nombre: "Taji",
@@ -333,7 +366,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Donado por un zoológico en quiebra debido a mala gestión",
-    recinto: "Zona Sur - León Alfa"
+    recinto: "Zona Sur - León Alfa",
+  adopciones: 0
   },
             { nombre: "Leonora",
                  img: "https://i.postimg.cc/XJvxQLY6/12a6e8fa98c5f482e9381895824a1525.jpg",
@@ -344,7 +378,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por un zoológico clausurado por maltrato animal",
-    recinto: "Zona Sur - León Beta"
+    recinto: "Zona Sur - León Beta",
+  adopciones: 0
   },
 
             { nombre: "Rami",
@@ -356,7 +391,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Rescatado de un zoológico sin licencia que fue cerrado por autoridades",
-    recinto: "Zona Sur - León Gamma"
+    recinto: "Zona Sur - León Gamma",
+  adopciones: 0
   },
             { nombre: "Daphne",
          img: "https://i.postimg.cc/T2Vbn2w9/ed748a8fdd6ce2e7f16d08c3ea5261f4.jpg",
@@ -367,7 +403,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por un zoológico africano en quiebra",
-    recinto: "Zona Sur - León Gamma"
+    recinto: "Zona Sur - León Gamma",
+  adopciones: 0
   },
 
             { nombre: "Amir", 
@@ -379,7 +416,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatado de un zoológico sin recursos",
-    recinto: "Guardería León Sur"
+    recinto: "Guardería León Sur",
+  adopciones: 0
   },
             { nombre: "Chloe", 
             img: "https://i.postimg.cc/MGNGkYGb/87b0152badccab22ae23803da89d7f1a.jpg",
@@ -390,7 +428,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada tras cierre de zoológico africano",
-    recinto: "Zona G - Refugio León 1"
+    recinto: "Zona G - Refugio León 1",
+  adopciones: 0
   },
 
             { nombre: "Hercules",
@@ -402,7 +441,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Abandonado por zoológico tras sanción",
-    recinto: "Guardería León MAB"
+    recinto: "Guardería León MAB",
+  adopciones: 0
   },
             { nombre: "Selene",
          img: "https://i.postimg.cc/jjnrzN3D/2e2fed93607177d29793f7729d31a526.jpg",
@@ -413,7 +453,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico sin permisos",
-    recinto: "Zona G - Refugio León 1"
+    recinto: "Zona G - Refugio León 1",
+  adopciones: 0
   },
 
             { nombre: "Themis",
@@ -425,7 +466,8 @@ const animalData = {
     origen: "África",
     fechaRescate: "2020-03-15",
     razonRescate: "Encontrado como mascota ilegal en una vivienda",
-    recinto: "Zona G - Refugio León 2"
+    recinto: "Zona G - Refugio León 2",
+  adopciones: 0
   },
             { nombre: "Anika", 
                 img: "https://i.postimg.cc/DZVWbR3H/77ac5050a11b2e7df699f21013f0e107.jpg",
@@ -436,7 +478,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico en quiebra por falta de alimentos",
-    recinto: "Zona G - Refugio León 3"
+    recinto: "Zona G - Refugio León 3",
+  adopciones: 0
   },
 
             { nombre: "Suryan",
@@ -448,7 +491,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Donado tras cierre definitivo de zoológico",
-    recinto: "Zona G - Refugio León 3"
+    recinto: "Zona G - Refugio León 3",
+  adopciones: 0
   },
             { nombre: "Kiran", 
                 img: "https://i.postimg.cc/kXHp8yDK/049ca5c0a950d0deca1b4bf3f2abc2fe.jpg",
@@ -459,7 +503,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico en declive económico",
-    recinto: "Zona G - Refugio León 3"
+    recinto: "Zona G - Refugio León 3",
+  adopciones: 0
   },
 
             { nombre: "Zulu",
@@ -471,7 +516,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Encontrado sedado y herido cerca de una reserva",
-    recinto: "Zona G - Refugio León 4"
+    recinto: "Zona G - Refugio León 4",
+  adopciones: 0
   },
 
             { nombre: "Thandi",
@@ -484,7 +530,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico clausurado",
-    recinto: "Zona G - Refugio León 4"
+    recinto: "Zona G - Refugio León 4",
+  adopciones: 0
   },
 
             { nombre: "Nayla",
@@ -496,7 +543,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico sin recursos",
-    recinto: "Zona G - Refugio León 4"
+    recinto: "Zona G - Refugio León 4",
+  adopciones: 0
   },
 
 
@@ -509,7 +557,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatado del tráfico ilegal de fauna",
-    recinto: "Zona H - León Alto"
+    recinto: "Zona H - León Alto",
+  adopciones: 0
   },
             { nombre: "Penda",
              img: "https://i.postimg.cc/xCTHqf1T/38f998f1c8d8046293868aca88159717.jpg",
@@ -520,7 +569,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Encontrada sola en una carretera rural",
-    recinto: "Guardería León MAB"
+    recinto: "Guardería León MAB",
+  adopciones: 0
   },
 
             { nombre: "King", 
@@ -532,7 +582,8 @@ const animalData = {
     origen: "África",
     fechaRescate: "2021-05-20",
     razonRescate: "Rescatado de un estanque profundo donde luchaba por salir",
-    recinto: "Zona H - León 5"
+    recinto: "Zona H - León 5",
+  adopciones: 0
   },
             { nombre: "Ariya", 
         img: "https://i.postimg.cc/g0Gn2RFh/21c14258b05b5aa80faf1a235710353c.jpg",
@@ -543,7 +594,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico sin fondos",
-    recinto: "Zona F - León 6"
+    recinto: "Zona F - León 6",
+  adopciones: 0
   },
 
             { nombre: "Hunter",
@@ -555,7 +607,8 @@ const animalData = {
     origen: "África",
     fechaRescate: "2020-03-15",
     razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona H - León 6"
+    recinto: "Zona H - León 6",
+  adopciones: 0
   },
             { nombre: "Queen",
         img: "https://i.postimg.cc/4xW4gq3V/315f82e25c7563caf9a202cd0e962f7f.jpg",
@@ -566,7 +619,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico en cierre",
-    recinto: "Zona H - León 7"
+    recinto: "Zona H - León 7",
+  adopciones: 0
   },
 
             { nombre: "Trueno",
@@ -578,7 +632,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Transferido desde zoológico en crisis",
-    recinto: "Zona H - León 7"
+    recinto: "Zona H - León 7",
+  adopciones: 0
   },
             { nombre: "Bella",
          img: "https://i.postimg.cc/kg0Mj8Yt/396e36191158ecae81206e65daf3ecba.jpg",
@@ -589,7 +644,8 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico sin recursos",
-    recinto: "Zona H - León 7"
+    recinto: "Zona H - León 7",
+  adopciones: 0
   },
 
             { nombre: "Titan", 
@@ -601,7 +657,8 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Donado tras cierre definitivo de zoológico",
-    recinto: "Zona H - León Alfa"
+    recinto: "Zona H - León Alfa",
+  adopciones: 0
   },
             { nombre: "Asha",
      img: "https://i.postimg.cc/pVBXVw9y/8367f80dbbf9046c9d389ee961292f5d.jpg",
@@ -612,9 +669,10 @@ const animalData = {
     origen: "Kenia",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por zoológico clausurado",
-    recinto: "Guardería León MAB"
+    recinto: "Guardería León MAB",
+  adopciones: 0
   },
-            { nombre: "Diller",
+     { nombre: "Diller",
      img: "https://i.postimg.cc/Hkd9qS00/61e4648fd3e696bc9218376727cce785.jpg",
       edad: "3 años",
     peso: 245,
@@ -622,11 +680,12 @@ const animalData = {
     origen: "Sudáfrica",
     fechaRescate: "2018-07-10",
     razonRescate: "Rescatado del tráfico ilegal de animales",
-    recinto: "Zona H - León 8"
-  }
-        ],
+    recinto: "Zona H - León 8",
+  adopciones: 0
+  } 
+    ],
 
-        "Tigres": [
+ "Tigres": [
   {
     nombre: "Rajah",
     img: "https://i.postimg.cc/sX4hqvVV/0ff9d277ae7ff5b1d7109085fe0497fa.jpg",
@@ -643,7 +702,7 @@ const animalData = {
     nombre: "Shere Khan",
     img: "https://i.postimg.cc/fRchcM2c/141b9022b0db64378710ac673b48c30b.jpg",
     especie: "Panthera tigris",
-    edad: 9,
+    edad: "9 años",
     peso: 220,
     genero: "Macho",
     origen: "Nepal",
@@ -655,7 +714,7 @@ const animalData = {
     nombre: "Drake",
     img: "https://i.postimg.cc/zfx67vng/530f6f004f23be861a5843b481deb7bb.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+    edad: "7 años",
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
@@ -668,7 +727,7 @@ const animalData = {
     nombre: "Rocco",
     img: "https://i.postimg.cc/kX4bYJLm/2acc60eafdfa9b31df9e88a0964ee57b.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+    edad: "6 años",
     peso: 200,
     genero: "Macho",
     origen: "India",
@@ -680,7 +739,7 @@ const animalData = {
     nombre: "Ares",
     img: "https://i.postimg.cc/FKG56DQ1/72427c0764d6bc52f0ce7c9186a43081.jpg",
     especie: "Panthera tigris",
-    edad: 9,
+    edad: "9 años",
     peso: 220,
     genero: "Macho",
     origen: "Nepal",
@@ -688,11 +747,11 @@ const animalData = {
     razonRescate: "Donado por zoológico en quiebra",
     recinto: "Zona Tigres"
   },
-            {
+     {
     nombre: "Tristan",
     img: "https://i.postimg.cc/ZqJzjX21/3b56073c437683618b133eaf284fc740.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+    edad: "7 años",
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
@@ -705,7 +764,7 @@ const animalData = {
     nombre: "Orion",
     img: "https://i.postimg.cc/sDC6p7tL/6a9d1a79771624d1edece6fe46fb8d24.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+    edad: "6 años",
     peso: 200,
     genero: "Macho",
     origen: "India",
@@ -738,7 +797,7 @@ const animalData = {
     recinto: "Zona Tigres"
   },
 
-           {
+   {
     nombre: "Samuel",
     img: "https://i.postimg.cc/BbqxgrK7/67655b2b0d432e06b9bdc93e3ed31647.jpg",
     especie: "Panthera tigris",
@@ -751,7 +810,7 @@ const animalData = {
     recinto: "Zona Tigres"
   },
 
-           {
+   {
     nombre: "Jade",
     img: "https://i.postimg.cc/QtqSXyMZ/73025c2d1013e4547628f0cdb23a8716.jpg",
     especie: "Panthera tigris",
@@ -776,7 +835,7 @@ const animalData = {
     razonRescate: "Donado por zoológico en quiebra",
     recinto: "Zona Tigres"
   },
-         {
+   {
     nombre: "Olivia",
     img: "https://i.postimg.cc/3rkNgDg2/f2e2291a54e565c6881e6f17a389a447.jpg",
     especie: "Panthera tigris",
@@ -788,7 +847,7 @@ const animalData = {
     razonRescate: "Donado por zoológico en quiebra",
     recinto: "Zona Tigres"
   },
-           {
+  {
     nombre: "Margarita",
     img: "https://i.postimg.cc/k5rLH8tk/68a7d123e616d95c31bfee52521302a3.jpg",
     especie: "Panthera tigris",
@@ -801,7 +860,7 @@ const animalData = {
     recinto: "Zona Tigres"
   },
 
-          {
+  {
     nombre: "Astrid",
     img: "https://i.postimg.cc/BQkXhxxT/d7775e9b5796987a2197e24261fd1a65.jpg",
     especie: "Panthera tigris",
@@ -813,7 +872,7 @@ const animalData = {
     razonRescate: "Donado por zoológico en quiebra",
     recinto: "Zona Tigres"
   },
-            {
+  {
     nombre: "Lia",
     img: "https://i.postimg.cc/HWSRgFy0/d6acd4555935346141492c6705403741.jpg",
     especie: "Panthera tigris",
@@ -825,7 +884,7 @@ const animalData = {
     razonRescate: "Donado por zoológico en quiebra",
     recinto: "Zona Tigres"
   },
-             {
+   {
     nombre: "Sundar",
     img: "https://i.postimg.cc/NMSgNp1m/171f27b67d2edc8e8e900e93714557f9.jpg",
     especie: "Panthera tigris",
@@ -1824,7 +1883,8 @@ const animalData = {
         ],
        
     };
-    
+  
+
 
     // Mostrar detalles de un animal
     function showAnimalDetails(animal) {
@@ -1842,37 +1902,45 @@ const animalData = {
     animalList.innerHTML = ""; // Limpiar contenido anterior
 
 
-
     // Mostrar los animales
 animalData[animal].forEach(item => {
-    const card = document.createElement("div");
-    card.classList.add("card", "animal-detail-card");
+  const card = document.createElement("div");
+card.classList.add("card", "animal-detail-card");
 
-    const inner = document.createElement("div");
-    inner.classList.add("card-inner");
 
-    // --- Cara frontal con imagen y tabla ---
-    const front = document.createElement("div");
-    front.classList.add("card-face", "card-front");
+const inner = document.createElement("div");
+inner.classList.add("card-inner");
 
-    const img = document.createElement("img");
-    img.src = item.img;
-    img.alt = item.nombre;
 
-    const h3 = document.createElement("h3");
-    h3.innerText = item.nombre;
+// --- Cara frontal con imagen y tabla ---
+const front = document.createElement("div");
+front.classList.add("card-face", "card-front");
 
-    const table = document.createElement("table");
-    table.classList.add("animal-table");
-    table.innerHTML = `
-      
-        <tr><th>Edad</th><td>${item.edad}</td></tr>
-       <tr><th>Peso</th><td>${item.peso} kg </td></tr>
-        <tr><th>Sexo</th><td>${item.genero}</td></tr>
-         <tr><th>Origen</th><td>${item.origen}</td></tr>
+const img = document.createElement("img");
+img.src = item.img;
+img.alt = item.nombre;
 
-    `;
+const h3 = document.createElement("h3");
+h3.innerText = item.nombre;
 
+const table = document.createElement("table");
+table.classList.add("animal-table");
+table.innerHTML = `
+  <tr><th>Edad</th><td>${item.edad}</td></tr>
+  <tr><th>Peso</th><td>${item.peso} kg</td></tr>
+  <tr><th>Sexo</th><td>${item.genero}</td></tr>
+  <tr><th>Origen</th><td>${item.origen}</td></tr>
+ <tr><th>Adopción: </th><td>$${item.donacionTotal ? item.donacionTotal.toFixed(2) : "0.00"}</td></tr>
+
+`;
+
+// ✅ Aquí agregas la fila de adopciones
+
+
+
+
+
+// Ahora añades todo al front
     front.appendChild(img);
     front.appendChild(h3);
     front.appendChild(table);
@@ -1911,7 +1979,7 @@ animalList.appendChild(card);
 });
 
 
-    }
+  }
     
     // Volver a la vista principal
     function goBack() {
