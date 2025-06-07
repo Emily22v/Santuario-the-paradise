@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopción</title>
+</head>
+<body>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santuario Animal - Adopciones</title>
+    <link rel="stylesheet" href="./css/adopcion.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐾 Santuario Animal</h1>
+            <p>Adopta y ayuda a nuestros animales rescatados</p>
+        </div>
+
+      <!-- 🟢 AÑADIR ESTO ARRIBA -->
+<div class="animals-grid hidden" id="animals-grid"></div>
+
+<!-- 🔽 Selector de tipos de animales -->
+<div class="animal-selector">
+  <h2>Selecciona el tipo de animal</h2>
+  <div class="animal-types" id="animal-types"></div>
+</div>
+
+
+            <!-- Formulario de adopción -->
+            <div class="adoption-form" id="adoption-form">
+                <button class="back-btn" onclick="goBack()">← Volver</button>
+                
+                <div class="selected-animal-info" id="selected-animal-info"></div>
+
+                <h2>Formulario de Adopción</h2>
+                <form id="adoption-form-element">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tarjeta">Número de tarjeta:</label>
+                            <input type="text" id="tarjeta" name="tarjeta" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clave">Clave de tarjeta:</label>
+                            <input type="password" id="clave" name="clave" placeholder="***" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad de donación ($):</label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frecuencia">Frecuencia de donación:</label>
+                            <select id="frecuencia" name="frecuencia" required>
+                                <option value="">Seleccionar...</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="trimestral">Trimestral</option>
+                                <option value="semestral">Semestral</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="adopt-btn">🐾 Adoptar Ahora</button>
+                </form>
+
+                <div class="success-message" id="success-message">
+                    <h3>🎉 ¡Adopción exitosa!</h3>
+                    <p>Gracias por adoptar a nuestro animal. Tu donación ha sido registrada y el animal ya cuenta con tu apoyo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importar tu script de datos -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Verificar que los datos estén disponibles
+        if (typeof animalData === 'undefined') {
+            console.error('Los datos de animales no están disponibles. Asegúrate de que el script esté cargado correctamente.');
+            // Datos de ejemplo en caso de que no se cargue el script
+            window.animalData = {
+                "Leones": [
+                    {
+                        nombre: "Simba",
+                        img: "https://i.postimg.cc/g0MhMNjD/1f339afeb6840c1993444fa6fbfa2a74.jpg",
+                        edad: "8 años",
+                        peso: 190,
+                        genero: "Macho",
+                        origen: "Guatemala",
+                        fechaRescate: "2019-05-12",
+                        razonRescate: "Rescatado de un zoológico clausurado",
+                        recinto: "Sabana Norte",
+                        adopciones: 0
+                    }
+                ]
+            };
+        }
+
+        // Inicializar campos de donación si no existen
+        function initializeDonationFields() {
+            Object.keys(animalData).forEach(animalType => {
+                animalData[animalType].forEach(animal => {
+                    if (!animal.hasOwnProperty('adopciones')) {
+                        animal.adopciones = 0;
+                    }
+                    if (!animal.hasOwnProperty('donacionTotal')) {
+                        animal.donacionTotal = 0;
+                    }
+                });
+            });
+        }
+
+        let selectedAnimal = null;
+        let selectedAnimalType = null;
+        let currentlyDisplayedType = null;
+
+        // Inicializar la página
+        function init() {
+              const savedData = localStorage.getItem('animalData');
+    if (savedData) {
+        animalData = JSON.parse(savedData);
+    }
+            initializeDonationFields();
+            createAnimalTypeButtons();
+        }
+        function saveAnimalData() {
+    localStorage.setItem('animalData', JSON.stringify(animalData));
+}
+
+
+        // Crear botones de tipos de animales
+        function createAnimalTypeButtons() {
+    const container = document.getElementById('animal-types');
+    container.innerHTML = ''; // Limpiar contenedor
+
+    if (animalData && typeof animalData === 'object') {
+        Object.keys(animalData).forEach(animalType => {
+            const button = document.createElement('button');
+            button.className = 'animal-type-btn';
+            button.textContent = animalType;
+
+            button.onclick = () => {
+                // Quitar 'selected' de todos los botones
+                document.querySelectorAll('.animal-type-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+
+                // Agregar 'selected' al botón actual
+                button.classList.add('selected');
+
+                // Mostrar animales del tipo seleccionado
+                showAnimalsOfType(animalType);
+            };
+
+            container.appendChild(button);
+        });
+    } else {
+        container.innerHTML = '<p style="text-align: center; color: #e74c3c;">Error: No se pudieron cargar los datos de animales. Revisa que el script esté correctamente vinculado.</p>';
+    }
+}
+
+
+        // Mostrar animales de un tipo específico
+        function showAnimalsOfType(animalType) {
+    currentlyDisplayedType = animalType;
+    const grid = document.getElementById('animals-grid');
+    grid.innerHTML = ''; // Limpiar grid
+    grid.classList.remove('hidden'); // Mostrar grid
+
+    animalData[animalType].forEach((animal, index) => {
+        const card = document.createElement('div');
+        card.className = 'simple-animal-card';
+
+        const img = document.createElement('img');
+        img.src = animal.img;
+        img.alt = animal.nombre;
+        img.className = 'simple-animal-img';
+
+        const name = document.createElement('div');
+        name.className = 'simple-animal-name';
+        name.textContent = animal.nombre;
+
+        card.onclick = () => selectAnimal(animal, animalType, index, card);
+        card.appendChild(img);
+        card.appendChild(name);
+        grid.appendChild(card);
+    });
+}
+
+        // Crear tarjeta de animal
+        function createAnimalCard(animal, animalType, index) {
+            const card = document.createElement('div');
+            card.className = 'animal-card';
+            card.onclick = () => selectAnimal(animal, animalType, index, card);
+
+            const img = document.createElement('img');
+            img.src = animal.img;
+            img.alt = animal.nombre;
+            img.className = 'animal-img';
+
+            const info = document.createElement('div');
+            info.className = 'animal-info';
+
+            const name = document.createElement('h3');
+            name.textContent = animal.nombre;
+
+            const table = document.createElement('table');
+            table.className = 'animal-table';
+            
+            // Crear filas de información
+            const rows = [
+                ['Edad', animal.edad],
+                ['Peso', `${animal.peso} kg`],
+                ['Sexo', animal.genero],
+                ['Origen', animal.origen]
+            ];
+
+            // Agregar fila de donaciones si existe
+            if (animal.donacionTotal > 0) {
+                rows.push(['Donaciones', `$${animal.donacionTotal.toFixed(2)}`]);
+            }
+
+            rows.forEach(([label, value]) => {
+                const row = document.createElement('tr');
+                if (label === 'Donaciones') {
+                    row.className = 'donation-row';
+                }
+                row.innerHTML = `<th>${label}</th><td>${value}</td>`;
+                table.appendChild(row);
+            });
+
+            const selectBtn = document.createElement('button');
+            selectBtn.className = 'select-btn';
+            selectBtn.textContent = 'Seleccionar para adoptar';
+
+            info.appendChild(name);
+            info.appendChild(table);
+            info.appendChild(selectBtn);
+
+            card.appendChild(img);
+            card.appendChild(info);
+
+            return card;
+        }
+
+        // Seleccionar animal para adopción
+        function selectAnimal(animal, animalType, index, cardElement) {
+            selectedAnimal = animal;
+            selectedAnimalType = animalType;
+            selectedAnimal.index = index;
+
+            // Remover selección previa
+            document.querySelectorAll('.animal-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Marcar como seleccionado
+            cardElement.classList.add('selected');
+
+            // Mostrar formulario
+            showAdoptionForm();
+        }
+
+        // Mostrar formulario de adopción
+        function showAdoptionForm() {
+            const form = document.getElementById('adoption-form');
+            const animalInfo = document.getElementById('selected-animal-info');
+            
+            animalInfo.innerHTML = `
+                <h3>🐾 Has seleccionado a: ${selectedAnimal.nombre}</h3>
+                <p>Tipo: ${selectedAnimalType} | Edad: ${selectedAnimal.edad} | Origen: ${selectedAnimal.origen}</p>
+            `;
+
+            form.classList.add('show');
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Volver atrás
+        function goBack() {
+            document.getElementById('adoption-form').classList.remove('show');
+            document.getElementById('success-message').classList.remove('show');
+            
+            // Limpiar selección
+            document.querySelectorAll('.animal-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            selectedAnimal = null;
+            selectedAnimalType = null;
+        }
+
+        // Formatear número de tarjeta
+        document.getElementById('tarjeta').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '').replace(/[^0-9]/gi, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('adoption-form-element').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+            const cantidad = parseFloat(formData.get('cantidad'));
+
+            // Actualizar datos del animal
+            selectedAnimal.adopciones += 1;
+            selectedAnimal.donacionTotal += cantidad;
+
+            // Actualizar los datos en el array principal
+
+            animalData[selectedAnimalType][selectedAnimal.index] = selectedAnimal;
+
+  // Aquí guardas los cambios en localStorage
+    saveAnimalData();
+            // Mostrar mensaje de éxito
+            document.getElementById('success-message').classList.add('show');
+            
+            // Limpiar formulario
+            e.target.reset();
+
+            // Actualizar la vista de animales para mostrar la nueva donación
+            setTimeout(() => {
+                showAnimalsOfType(currentlyDisplayedType);
+                document.getElementById('success-message').classList.remove('show');
+                goBack();
+            }, 3000);
+        });
+
+        // Inicializar cuando carga la página
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
