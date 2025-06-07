@@ -325,6 +325,7 @@ margin: 15px;
   width: 100%;
   border-collapse: collapse;
   word-break: break-word;
+  
 }
 
 .animal-table th {
@@ -332,6 +333,7 @@ margin: 15px;
   padding-right: 5px;
   vertical-align: top;
   line-height: 1.2;
+  text-align: center;
 }
 
 /* Cara trasera */
