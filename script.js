@@ -1934,7 +1934,7 @@ table.innerHTML = `
 
 `;
 
-// ✅ Aquí agregas la fila de adopciones
+
 
 
 
