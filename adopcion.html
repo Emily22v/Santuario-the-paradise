@@ -147,18 +147,20 @@
         let currentlyDisplayedType = null;
 
         // Inicializar la página
-        function init() {
-              const savedData = localStorage.getItem('animalData');
+     const savedData = localStorage.getItem('animalData');
     if (savedData) {
         animalData = JSON.parse(savedData);
     }
             initializeDonationFields();
             createAnimalTypeButtons();
+               function init() {
+     
         }
-        function saveAnimalData() {
+       function saveAnimalData() {
     localStorage.setItem('animalData', JSON.stringify(animalData));
-}
 
+       }
+       
 
         // Crear botones de tipos de animales
         function createAnimalTypeButtons() {
@@ -343,8 +345,7 @@
 
             animalData[selectedAnimalType][selectedAnimal.index] = selectedAnimal;
 
-  // Aquí guardas los cambios en localStorage
-    saveAnimalData();
+  
             // Mostrar mensaje de éxito
             document.getElementById('success-message').classList.add('show');
             

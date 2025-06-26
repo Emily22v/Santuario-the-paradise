@@ -1,26 +1,28 @@
-let animalData = JSON.parse(localStorage.getItem('animalData')) || {
-    
+/*const animalData = {*/
+/*let animalData = JSON.parse(localStorage.getItem('animalData')) ||{*/
+localStorage.removeItem('animalData');
+    let animalData = {
  "Leones": [
  { nombre: "Simba",
    img: "https://i.postimg.cc/g0MhMNjD/1f339afeb6840c1993444fa6fbfa2a74.jpg",       
-    edad: "8 años",
-    peso: 190,
+   edadMesesAlRescate: 18,
+    peso: 195,
     genero: "Macho",
     origen: "Guatemala",
-    fechaRescate: "2019-05-12",
-    razonRescate: "Rescatado de un zoológico clausurado en Guatemala por maltrato animal",
+    fechaRescate: "2020-04-12",
+    razonRescate: "Fue encontrado enjaulado, desnutrido y en pésimas condiciones en un zoológico. ",
     recinto: "Sabana Norte",
   adopciones: 0
 },
 
  { nombre: "Nala", 
     img: "https://i.postimg.cc/k4DbC7sr/a00f6dd6c018a4dc6002e093e3bec72f.jpg",
-    edad: "6 años",
+    edadMesesAlRescate: 0,
     peso: 130,
     genero: "Hembra",
     origen: "El Salvador",
-    fechaRescate: "2020-08-19",
-    razonRescate: "Nacida en el santuario, hija de Simba y Zuri",
+    fechaRescate: "2020-08-12",
+    razonRescate: "Nacida en el santuario. Criada en condiciones dignas y sanas",
     recinto: "Sabana Norte",
     adopciones: 0
   },
@@ -28,21 +30,20 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
              { nombre: "Kenny", 
             img: "https://i.postimg.cc/GmhW3hg2/b399f3074f95b81f45b677b446402575.jpg",
               especie: "Panthera leo",
-    edad: "5 meses", // 5 meses
+    edadMesesAlRescate: 0,
     peso: 50,
     genero: "Macho",
     origen: "El Salvador",
     fechaRescate: "2025-01-11",
     razonRescate: "Nacido en el santuario, hijo de Simba y Nala. Criado en condiciones dignas y sanas",
-    recinto: "Zona A - León 1 y Guardería MAB"
-    ,
-  adopciones: 0
+    recinto: "Guardería MAB",
+    adopciones: 0
   },
 
             { nombre: "Kiara",
          img: "https://i.postimg.cc/xC7bTBpX/80b89aedd32bf55bf93777d08baabe45.jpg", 
           especie: "Panthera leo",
-    edad: "4 años",
+   edadMesesAlRescate: 0,
     peso: 127,
     genero: "Hembra",
     origen: "El Salvador",
@@ -55,7 +56,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Kovu",
      img: "https://i.postimg.cc/43wKqpk4/0b108eac95db2f9241356cad8bc06c80.jpg", 
        especie: "Panthera leo",
-    edad: "7 años",
+ edadMesesAlRescate: 0,
     peso: 153,
     genero: "Macho",
     origen: "Sudáfrica",
@@ -68,7 +69,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
 
   { nombre: "Mufasa",
  img: "https://i.postimg.cc/kgTNV9f7/9dbc2aac3d22ac614670979e1f26ed7c.jpg",
-     edad: "10 años",
+      edadMesesAlRescate: 0,
     peso: 210,
     genero: "Macho",
     origen: "Sudáfrica",
@@ -79,7 +80,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
   },
    { nombre: "Sarabi",
      img: "https://i.postimg.cc/RZ7Wmd89/171a473ae6e98ff2ad21ec68764fb2f7.jpg", 
-   edad: "9 años",
+   edadMesesAlRescate: 0,
     peso: 160,
     genero: "Hembra",
     origen: "Sudáfrica",
@@ -93,7 +94,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Dexter", 
             img: "https://i.postimg.cc/P5mM7Rqm/Dexter.jpg", 
             especie: "Panthera leo",
-    edad: "5 años",
+     edadMesesAlRescate: 0,
     peso: 215,
     genero: "Macho",
     origen: "El Salvador",
@@ -105,11 +106,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
  { nombre: "Snow",
     img: "https://i.postimg.cc/t46fDkP6/Snow.jpg", 
     especie: "Panthera leo",
-    edad: "4 años",
+     edadMesesAlRescate: 0,
     peso: 194,
     genero: "Macho",
     origen: "El Salvador",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2020-07-10",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas. Criado junto a Dexter",
     recinto: "Zona A - León 4",
   adopciones: 0
@@ -118,7 +119,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Rori", 
         img: "https://i.postimg.cc/3N3dYGkR/Rori.jpg", especie: "Panthera leo", age: "5 años",
           especie: "Panthera leo",
-    edad: "5 años",
+    edadMesesAlRescate: 0,
     peso: 200,
     genero: "Macho",
     origen: "El Salvador",
@@ -131,11 +132,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Yuna",
          img: "https://i.postimg.cc/1X5YsnTm/8bb94ad27220f7c9053e9cd8345d2f3c.jpg",
          especie: "Panthera leo",
-    edad: "8 años",
+    edadMesesAlRescate: 0,
     peso: 143,
     genero: "Hembra",
     origen: "Panamá",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2021-02-10",
     razonRescate: "Rescatada de un pueblo en Panamá",
     recinto: "Zona A - León 5",
   adopciones: 0
@@ -143,13 +144,13 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Timba",
          img: "https://i.postimg.cc/CK9X4ChB/07e2559a1b7a231e9b7e33603dd479b4.jpg", 
         especie: "Panthera leo",
-    edad: "3 años",
+    edadMesesAlRescate: 0,
     peso: 30,
     genero: "Macho",
-    origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    origen: "El Salvador",
+    fechaRescate: "2025-02-20",
     razonRescate: "Nacido y criado en el santuario en condiciones dignas. Hijo de Yuna y Rori",
-    recinto: "Zona A - León 5",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
@@ -157,11 +158,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Moyo",
     img: "https://i.postimg.cc/rsgDLQTh/459984b64631473aa75175bbb4597aee.jpg",
     especie: "Panthera leo",
-    edad: "7 años",
+    edadMesesAlRescate: 0,
     peso: 223,
     genero: "Macho",
-    origen: "Italia",
-    fechaRescate: "2020-03-15",
+    origen: "Tanzania",
+    fechaRescate: "2019-12-15",
     razonRescate: "Rescatado de un circo de animales",
     recinto: "Zona B - León 6",
   adopciones: 0
@@ -170,11 +171,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Amani",
     img: "https://i.postimg.cc/dVPhgp54/fbec36d2c3e238abfb046f409459e1f5.jpg",
     especie: "Panthera leo",
-    edad: "8 años",
+    edadMesesAlRescate: 0,
     peso: 137,
     genero: "Hembra",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2020-010-21",
     razonRescate: "Encontrada en un zoológico abandonado",
     recinto: "Zona B - León 6",
   adopciones: 0
@@ -184,12 +185,12 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Scar",
     img: "https://i.postimg.cc/SxSd0x0d/da25cfb467da519b507a8268f767b73d.jpg",
     especie: "Panthera leo",
-    edad: "7 años",
+    edadMesesAlRescate: 0,
     peso: 150,
     genero: "Macho",
-    origen: "Italia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Rescatado de un circo en Brasil",
+    origen: "Uganda",
+    fechaRescate: "2020-02-20",
+    razonRescate: "Rescatado de maltrato animal ",
     recinto: "Zona B - León 7",
   adopciones: 0
   },
@@ -197,11 +198,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Zira",
     img: "https://i.postimg.cc/FsffF0q7/a30a2f8a56af1df5fc5350c2960555e6.jpg",
     especie: "Panthera leo",
-    edad: "6 años",
+     edadMesesAlRescate: 0,
     peso: 146,
     genero: "Hembra",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2021-07-10",
     razonRescate: "Encontrada atrapada en una red de cazadores",
     recinto: "Zona B - León 8",
   adopciones: 0
@@ -210,12 +211,12 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Brutus",
     img: "https://i.postimg.cc/SsFjFrNC/Brutus.jpg",
     especie: "Panthera leo",
-    edad: "7 años",
+    edadMesesAlRescate: 0,
     peso: 190,
     genero: "Macho",
     origen: "Ucrania",
-    fechaRescate: "2020-03-15",
-    razonRescate: "Traído por la guerra con Rusia",
+    fechaRescate: "2019-03-15",
+    razonRescate: "Traído desde un zoológico por la situación de la guerra de Ucrania con Rusia",
     recinto: "Zona B - León 9",
   adopciones: 0
   },
@@ -223,7 +224,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     nombre: "Karl",
     img: "https://i.postimg.cc/Tw1xs5ng/Karl.jpg",
     especie: "Panthera leo",
-    edad: "7 años",
+    edadMesesAlRescate: 0,
     peso: 182,
     genero: "Macho",
     origen: "México",
@@ -236,22 +237,22 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
   { nombre: "Zeus",
     img: "https://i.postimg.cc/SxZTThz5/02369b6ad4230a9643cd40a2927fb806.jpg",
     especie: "Panthera leo",
-    edad: "4 años",
+    edadMesesAlRescate: 0,
     peso: 183,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2020-04-15",
     razonRescate: "Fue hallado anestesiado dentro de una jaula a bordo de un avión",
     recinto: "Zona Alfa - León 1",
   adopciones: 0
   },
-            { nombre: "Shira",
-             img: "https://i.postimg.cc/52nqL4sG/5687d7c732d8e13f81cb9a9ef61ba276.jpg",
-            especie: "Panthera leo",
-    edad: "4 años",
+      { nombre: "Shira",  
+     img: "https://i.postimg.cc/52nqL4sG/5687d7c732d8e13f81cb9a9ef61ba276.jpg",
+    especie: "Panthera leo",
+     edadMesesAlRescate: 0,
     peso: 120,
     genero: "Hembra",
-    origen: "Kenia",
+    origen: "Mozambique",
     fechaRescate: "2021-05-20",
     razonRescate: "Fue hallada inmóvil a la orilla de un río, con las patas amarradas",
     recinto: "Zona Delta - Refugio 3",
@@ -261,23 +262,23 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Jengo",
          img: "https://i.postimg.cc/0yDdvgWt/2f098a906ff8b08b3e1404e5dc682330.jpg",
        especie: "Panthera leo",
-    edad: "5 meses",
+     edadMesesAlRescate: 0,
     peso: 40,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2025-03-29",
     razonRescate: "Rescatado tras quedar huérfano debido a la caza ilegal de su madre",
-    recinto: "Nursery - Cuna 2",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
             {  nombre: "Zuri",
              img: "https://i.postimg.cc/wBxLbnBn/b11969762a688059515e559d2ad76a5d.jpg",
-             edad: "7 años",
+              edadMesesAlRescate: 0,
     peso: 145,
     genero: "Hembra",
     origen: "Kenia",
     fechaRescate: "2019-07-21",
-    razonRescate: "Rescatada tras ser abandonada por un circo ilegal en Kenia",
+    razonRescate: "Rescatada tras ser abandonada por un circo ilegal",
     recinto: "Sabana Sur",
   adopciones: 0
   },
@@ -285,18 +286,18 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
 
   { nombre: "Kali",
    img: "https://i.postimg.cc/qMFNK9Pp/Male-Lion-Shumba-stunning-cat.jpg",
-   edad: "5 años",
+   edadMesesAlRescate: 0,
     peso: 135,
     genero: "Hembra",
     origen: "Nicaragua",
-    fechaRescate: "2021-06-14",
+    fechaRescate: "2020-09-14",
     razonRescate: "Hallada en una finca utilizada para tráfico ilegal de fauna exótica",
     recinto: "Sabana Este",
   adopciones: 0
   },
             { nombre: "Imani",
              img: "https://i.postimg.cc/65NpLCS2/4180314487453dc50efe7f442b072b1a.jpg",
-         edad: "4 años",
+        edadMesesAlRescate: 0,
     peso: 125,
     genero: "Hembra",
     origen: "El Salvador",
@@ -309,12 +310,12 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Jabari",
          img: "https://i.postimg.cc/XYr1C7jQ/bf46a25598f36211ec4c2f0902349c02.jpg",
          especie: "Panthera leo",
-    edad: "2 años",
+     edadMesesAlRescate: 0,
     peso: 90,
     genero: "Macho",
-    origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
-    razonRescate: "Donado por un zoológico que cerró por falta de fondos",
+    origen: "Zambia",
+    fechaRescate: "2022-12-17",
+    razonRescate: "Una reserva de animales lo otorgó",
     recinto: "Territorio Este - Sector León 3",
   adopciones: 0
   },
@@ -322,37 +323,37 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Samira",
          img: "https://i.postimg.cc/qMrMHG1V/dabbf668a5e8ea60e0da2b0fa6032d12.jpg",
          especie: "Panthera leo",
-    edad: "4 meses", 
+   edadMesesAlRescate: 0,
     peso: 150,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2025-02-24",
     razonRescate: "Donada por un zoológico que no podía hacerse cargo de ella",
-    recinto: "Área Infantil - Guardería 1",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
             { nombre: "Shujaa",
                  img: "https://i.postimg.cc/PJ4HwmZ8/Shujaa.jpg",
                   especie: "Panthera leo",
-    edad: "5 años",
+     edadMesesAlRescate: 0,
     peso: 184,
     genero: "Macho",
-    origen: "Kenia",
+    origen: "Uganda",
     fechaRescate: "2021-05-20",
-    razonRescate: "Rescatado de un zoológico abandonado",
+    razonRescate: "Encontrado en el patio de una casa",
     recinto: "Zona Norte - Hábitat León 4",
   adopciones: 0
   },
             { nombre: "Nadia",
          img: "https://i.postimg.cc/zBBvnrfX/917e110b70981f724df7dd8494201433.jpg",
          especie: "Panthera leo",
-    edad: "5 años",
+    edadMesesAlRescate: 0,
     peso: 135,
     genero: "Hembra",
-    origen: "Kenia",
+    origen: "África",
     fechaRescate: "2021-05-20",
-    razonRescate: "Donada tras cierre de zoológico sin licencia",
+    razonRescate: "Fue víctima de tráfico animal",
     recinto: "Zona Norte - Hábitat León 4",
   adopciones: 0
   },
@@ -360,7 +361,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Taji",
              img: "https://i.postimg.cc/ncV8j9Lq/Taji.jpg",
                especie: "Panthera leo",
-    edad: "6 años",
+     edadMesesAlRescate: 0,
     peso: 210,
     genero: "Macho",
     origen: "Sudáfrica",
@@ -372,36 +373,36 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Leonora",
                  img: "https://i.postimg.cc/XJvxQLY6/12a6e8fa98c5f482e9381895824a1525.jpg",
                    especie: "Panthera leo",
-    edad: "4 años",
+     edadMesesAlRescate: 0,
     peso: 144,
     genero: "Hembra",
-    origen: "Kenia",
+    origen: "Uganda",
     fechaRescate: "2021-05-20",
     razonRescate: "Donada por un zoológico clausurado por maltrato animal",
     recinto: "Zona Sur - León Beta",
   adopciones: 0
   },
 
-            { nombre: "Rami",
+         { nombre: "Rami",
                  img: "https://i.postimg.cc/JhW00TM4/Rami.jpg",
                 especie: "Panthera leo",
-    edad: "5 años",
+     edadMesesAlRescate: 0,
     peso: 186,
     genero: "Macho",
     origen: "Kenia",
     fechaRescate: "2021-05-20",
-    razonRescate: "Rescatado de un zoológico sin licencia que fue cerrado por autoridades",
+    razonRescate: "Rescatada de circo junto a Anika",
     recinto: "Zona Sur - León Gamma",
   adopciones: 0
   },
             { nombre: "Daphne",
          img: "https://i.postimg.cc/T2Vbn2w9/ed748a8fdd6ce2e7f16d08c3ea5261f4.jpg",
          especie: "Panthera leo",
-    edad: "4 años",
+   edadMesesAlRescate: 0,
     peso: 147,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2021-01-19",
     razonRescate: "Donada por un zoológico africano en quiebra",
     recinto: "Zona Sur - León Gamma",
   adopciones: 0
@@ -410,23 +411,23 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Amir", 
             img: "https://i.postimg.cc/d0CSMYqV/6f9c7e1b103c3d88c4e12269dce983f3.jpg",
           especie: "Panthera leo",
-    edad: "5 meses", // meses
+     edadMesesAlRescate: 0,
     peso: 43,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2025-06-18",
     razonRescate: "Rescatado de un zoológico sin recursos",
-    recinto: "Guardería León Sur",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
             { nombre: "Chloe", 
             img: "https://i.postimg.cc/MGNGkYGb/87b0152badccab22ae23803da89d7f1a.jpg",
            especie: "Panthera leo",
-    edad: "4 años",
+     edadMesesAlRescate: 0,
     peso: 150,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2020-05-20",
     razonRescate: "Donada tras cierre de zoológico africano",
     recinto: "Zona G - Refugio León 1",
   adopciones: 0
@@ -435,36 +436,36 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Hercules",
              img: "https://i.postimg.cc/fbv4qrYF/fae1c4f9c772bccc1aafabba9b8806a1.jpg",
            especie: "Panthera leo",
-    edad: "2 meses", // meses
+     edadMesesAlRescate: 0,
     peso: 34,
     genero: "Macho",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2025-03-23",
     razonRescate: "Abandonado por zoológico tras sanción",
-    recinto: "Guardería León MAB",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
             { nombre: "Selene",
          img: "https://i.postimg.cc/jjnrzN3D/2e2fed93607177d29793f7729d31a526.jpg",
         especie: "Panthera leo",
-    edad: "7 meses", // meses
+    edadMesesAlRescate: 0,
     peso: 34,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2025-07-23",
     razonRescate: "Donada por zoológico sin permisos",
-    recinto: "Zona G - Refugio León 1",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
             { nombre: "Themis",
          img: "https://i.postimg.cc/ZRyX44RD/233cfda71d4443827b2af70b1fe3e64f.jpg",
         especie: "Panthera leo",
-    edad: "3 años",
+    edadMesesAlRescate: 0,
     peso: 190,
     genero: "Macho",
     origen: "África",
-    fechaRescate: "2020-03-15",
+    fechaRescate: "2022-03-15",
     razonRescate: "Encontrado como mascota ilegal en una vivienda",
     recinto: "Zona G - Refugio León 2",
   adopciones: 0
@@ -472,12 +473,12 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Anika", 
                 img: "https://i.postimg.cc/DZVWbR3H/77ac5050a11b2e7df699f21013f0e107.jpg",
               especie: "Panthera leo",
-    edad: "6 años",
+    edadMesesAlRescate: 0,
     peso: 150,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico en quiebra por falta de alimentos",
+    fechaRescate: "2019-08-29",
+    razonRescate: "Rescatada de circo junto a Rami",
     recinto: "Zona G - Refugio León 3",
   adopciones: 0
   },
@@ -485,65 +486,65 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Suryan",
                  img: "https://i.postimg.cc/FKk3SvF4/Suryan.jpg",
                   especie: "Panthera leo",
-    edad: "5 años",
+     edadMesesAlRescate: 0,
     peso: 178,
     genero: "Macho",
-    origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
-    razonRescate: "Donado tras cierre definitivo de zoológico",
+    origen: "El Salvador",
+    fechaRescate: "2020-09-22",
+    razonRescate: "Criado en el santuario en condiciones dignas",
     recinto: "Zona G - Refugio León 3",
   adopciones: 0
   },
             { nombre: "Kiran", 
                 img: "https://i.postimg.cc/kXHp8yDK/049ca5c0a950d0deca1b4bf3f2abc2fe.jpg",
                 especie: "Panthera leo",
-    edad: "8 meses", // meses
+     edadMesesAlRescate: 0,
     peso: 50,
     genero: "Hembra",
-    origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico en declive económico",
-    recinto: "Zona G - Refugio León 3",
+    origen: "El Salvador",
+    fechaRescate: "2025-01-02",
+    razonRescate: "Criada en el santuario en condiciones dignas",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
             { nombre: "Zulu",
                  img: "https://i.postimg.cc/qMK08tfq/10004d88832543695256ab78338c06e5.jpg",
            especie: "Panthera leo",
-    edad: "4 años",
+     edadMesesAlRescate: 0,
     peso: 150,
     genero: "Macho",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2019-06-27",
     razonRescate: "Encontrado sedado y herido cerca de una reserva",
     recinto: "Zona G - Refugio León 4",
   adopciones: 0
   },
 
-            { nombre: "Thandi",
-                 img: "https://i.postimg.cc/Dz49MM42/e050731a25842c91ab9dedc570d12dd5.jpg", 
+        { nombre: "Thandi",
+           img: "https://i.postimg.cc/Dz49MM42/e050731a25842c91ab9dedc570d12dd5.jpg", 
                  
-                 especie: "Panthera leo",
-    edad: "4 meses",
+        especie: "Panthera leo",
+    edadMesesAlRescate: 0,
     peso: 147,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico clausurado",
-    recinto: "Zona G - Refugio León 4",
+    fechaRescate: "2021-04-20",
+    razonRescate: "Rescatada de un pueblo donde la querían sacrificar",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
             { nombre: "Nayla",
                  img: "https://i.postimg.cc/MKW8p5ND/307e3fdb4670f3ea73b9f273655ce37c.jpg", 
                especie: "Panthera leo",
-    edad: "7 meses", // meses
-    peso: 150,
+    edadMesesAlRescate: 0,
+    peso: 45,
     genero: "Hembra",
-    origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico sin recursos",
-    recinto: "Zona G - Refugio León 4",
+    origen: "El Salvador",
+    fechaRescate: "2025-04-26",
+    razonRescate: "Criada en el santuario en condiciones dignas",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
@@ -551,11 +552,11 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Omar", 
                 img: "https://i.postimg.cc/RZLv0vFq/Omar.jpg", 
              especie: "Panthera leo",
-    edad: "5 años",
-    peso: 200,
+  edadMesesAlRescate: 0,
+    peso: 196,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2020-09-11",
     razonRescate: "Rescatado del tráfico ilegal de fauna",
     recinto: "Zona H - León Alto",
   adopciones: 0
@@ -563,24 +564,24 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Penda",
              img: "https://i.postimg.cc/xCTHqf1T/38f998f1c8d8046293868aca88159717.jpg",
            especie: "Panthera leo",
-    edad: "5 meses", // meses
+   edadMesesAlRescate: 0,
     peso: 43,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2025-05-20",
     razonRescate: "Encontrada sola en una carretera rural",
-    recinto: "Guardería León MAB",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
 
             { nombre: "King", 
             img: "https://i.postimg.cc/fyJ8shvg/7dc201d5e01e57b5213b2fbda2c54a88.jpg", 
              especie: "Panthera leo",
-   edad: "2 años",
+   edadMesesAlRescate: 0,
     peso: 150,
     genero: "Macho",
     origen: "África",
-    fechaRescate: "2021-05-20",
+    fechaRescate: "2022-12-06",
     razonRescate: "Rescatado de un estanque profundo donde luchaba por salir",
     recinto: "Zona H - León 5",
   adopciones: 0
@@ -588,37 +589,37 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Ariya", 
         img: "https://i.postimg.cc/g0Gn2RFh/21c14258b05b5aa80faf1a235710353c.jpg",
          especie: "Panthera leo",
-  edad: " 5 años",
+  edadMesesAlRescate: 0,
     peso: 135,
     genero: "Hembra",
-    origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico sin fondos",
-    recinto: "Zona F - León 6",
+    origen: "El Salvador",
+    fechaRescate: "2021-11-29",
+    razonRescate: "Criada en el santuario en condiciones dignas",
+    recinto: "Zona H - León 6",
   adopciones: 0
   },
 
             { nombre: "Hunter",
      img: "https://i.postimg.cc/htVF79qP/18e2abbfa121446e6068700b556b5610.jpg",
     especie: "Panthera leo",
-    edad: "5 años",
+   edadMesesAlRescate: 0,
     peso: 190,
     genero: "Macho",
     origen: "África",
-    fechaRescate: "2020-03-15",
-    razonRescate: "Donado por zoológico en quiebra",
+    fechaRescate: "2020-09-15",
+    razonRescate: "Encontrado vagando solo cerca de zona de cacería ilegal",
     recinto: "Zona H - León 6",
   adopciones: 0
   },
             { nombre: "Queen",
         img: "https://i.postimg.cc/4xW4gq3V/315f82e25c7563caf9a202cd0e962f7f.jpg",
          especie: "Panthera leo",
-    edad: " 4 años",
+   edadMesesAlRescate: 0,
     peso: 135,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico en cierre",
+    fechaRescate: "2021-07-28",
+    razonRescate: "Fue regalada por un importante jeque que tiene un refugio",
     recinto: "Zona H - León 7",
   adopciones: 0
   },
@@ -626,24 +627,24 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Trueno",
      img: "https://i.postimg.cc/d3sbHw07/Trueno.jpg",
     especie: "Panthera leo",
-    edad: " 4 años",
+   edadMesesAlRescate: 0,
     peso: 179,
     genero: "Macho",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Transferido desde zoológico en crisis",
+    fechaRescate: "2020-07-18",
+    razonRescate: "Transferido desde zoológico",
     recinto: "Zona H - León 7",
   adopciones: 0
   },
             { nombre: "Bella",
          img: "https://i.postimg.cc/kg0Mj8Yt/396e36191158ecae81206e65daf3ecba.jpg",
            especie: "Panthera leo",
-    edad: "3 años",
+    edadMesesAlRescate: 0,
     peso: 150,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico sin recursos",
+    fechaRescate: "2021-09-27",
+    razonRescate: "Donada por refugio de fauna salvaje",
     recinto: "Zona H - León 7",
   adopciones: 0
   },
@@ -651,34 +652,34 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
             { nombre: "Titan", 
         img: "https://i.postimg.cc/6pP6T9VL/1ecaca9179ac439c8f0a31b7196d644b.jpg",
         especie: "Panthera leo",
-    edad: "9 años",
+    edadMesesAlRescate: 0,
     peso: 210,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
-    razonRescate: "Donado tras cierre definitivo de zoológico",
+    fechaRescate: "2019-10-13",
+    razonRescate: "Encontrado maltratado y amarrado en una jaula pequeña",
     recinto: "Zona H - León Alfa",
   adopciones: 0
   },
             { nombre: "Asha",
      img: "https://i.postimg.cc/pVBXVw9y/8367f80dbbf9046c9d389ee961292f5d.jpg",
     especie: "Panthera leo",
-    edad: "6 meses", // meses
+   edadMesesAlRescate: 0,
     peso: 35,
     genero: "Hembra",
     origen: "Kenia",
-    fechaRescate: "2021-05-20",
-    razonRescate: "Donada por zoológico clausurado",
-    recinto: "Guardería León MAB",
+    fechaRescate: "2025-03-22",
+    razonRescate: "Hallada en departamento siendo criada de manera ilegal",
+    recinto: "Guardería MAB",
   adopciones: 0
   },
      { nombre: "Diller",
      img: "https://i.postimg.cc/Hkd9qS00/61e4648fd3e696bc9218376727cce785.jpg",
-      edad: "3 años",
+    edadMesesAlRescate: 0,
     peso: 245,
     genero: "Macho",
     origen: "Sudáfrica",
-    fechaRescate: "2018-07-10",
+    fechaRescate: "2022-09-26",
     razonRescate: "Rescatado del tráfico ilegal de animales",
     recinto: "Zona H - León 8",
   adopciones: 0
@@ -688,609 +689,653 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
  "Tigres": [
   {
     nombre: "Rajah",
-    img: "https://i.postimg.cc/sX4hqvVV/0ff9d277ae7ff5b1d7109085fe0497fa.jpg",
+    img: "https://i.postimg.cc/fTNHN8PW/e562e436f578c8e5639ea830966cf4ec.jpg",
     especie: "Panthera tigris",
-    edad: 6,
     peso: 200,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-08-14",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
+
   },
           {
     nombre: "Shere Khan",
     img: "https://i.postimg.cc/fRchcM2c/141b9022b0db64378710ac673b48c30b.jpg",
     especie: "Panthera tigris",
-    edad: "9 años",
     peso: 220,
     genero: "Macho",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-06-05",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
              {
     nombre: "Drake",
     img: "https://i.postimg.cc/zfx67vng/530f6f004f23be861a5843b481deb7bb.jpg",
     especie: "Panthera tigris",
-    edad: "7 años",
-    peso: 180,
+  
+    peso: 250,
     genero: "Macho",
     origen: "Tailandia",
     fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
  {
     nombre: "Rocco",
     img: "https://i.postimg.cc/kX4bYJLm/2acc60eafdfa9b31df9e88a0964ee57b.jpg",
     especie: "Panthera tigris",
-    edad: "6 años",
+
     peso: 200,
     genero: "Macho",
     origen: "India",
     fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
             {
     nombre: "Ares",
     img: "https://i.postimg.cc/FKG56DQ1/72427c0764d6bc52f0ce7c9186a43081.jpg",
     especie: "Panthera tigris",
-    edad: "9 años",
-    peso: 220,
+  
+    peso: 2.7,
     genero: "Macho",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-05-09",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
      {
     nombre: "Tristan",
     img: "https://i.postimg.cc/ZqJzjX21/3b56073c437683618b133eaf284fc740.jpg",
     especie: "Panthera tigris",
-    edad: "7 años",
+    
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-11-22",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
            {
     nombre: "Orion",
     img: "https://i.postimg.cc/sDC6p7tL/6a9d1a79771624d1edece6fe46fb8d24.jpg",
     especie: "Panthera tigris",
-    edad: "6 años",
+ 
     peso: 200,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-08-14",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
            {
     nombre: "Freya",
     img: "https://i.postimg.cc/5NycQfVk/50c48ce09cc5312f7f7377728d8830fe.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 163,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-03-02",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
           {
     nombre: "Jade",
     img: "https://i.postimg.cc/gjBJW4Vz/e57fc77dfb84fe5f422b02423acf5540.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+   
+    peso: 159,
     genero: "Hembra",
     origen: "Tailandia",
     fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
    {
     nombre: "Samuel",
     img: "https://i.postimg.cc/BbqxgrK7/67655b2b0d432e06b9bdc93e3ed31647.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+  
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-11-22",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
    {
-    nombre: "Jade",
+    nombre: " Marcos",
     img: "https://i.postimg.cc/QtqSXyMZ/73025c2d1013e4547628f0cdb23a8716.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+   
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-09-25",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
             {
     nombre: "Bianca",
     img: "https://i.postimg.cc/PqzJr90y/5a25c45c0c845dd564a517e8e16f3a16.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+  
+    peso: 178,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-08-14",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
    {
     nombre: "Olivia",
     img: "https://i.postimg.cc/3rkNgDg2/f2e2291a54e565c6881e6f17a389a447.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+    
+    peso: 7,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-04-05",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Margarita",
     img: "https://i.postimg.cc/k5rLH8tk/68a7d123e616d95c31bfee52521302a3.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+  
     peso: 180,
     genero: "Hembra",
     origen: "Tailandia",
     fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
 
   {
     nombre: "Astrid",
     img: "https://i.postimg.cc/BQkXhxxT/d7775e9b5796987a2197e24261fd1a65.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+  
+    peso: 198,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-08-14",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Lia",
     img: "https://i.postimg.cc/HWSRgFy0/d6acd4555935346141492c6705403741.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+    
+    peso: 174,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-09-29",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
    {
     nombre: "Sundar",
     img: "https://i.postimg.cc/NMSgNp1m/171f27b67d2edc8e8e900e93714557f9.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+   
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
     fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Shera",
     img: "https://i.postimg.cc/pVSxxG5F/8cb3ca8a06a0271e4d72153c3228acd6.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+ 
     peso: 200,
     genero: "Macho",
     origen: "India",
     fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
            {
     nombre: "Kumar",
     img: "https://i.postimg.cc/vBHM8CvW/1fbd9f36c30f25d0da04aca1302b7252.jpg",
     especie: "Panthera tigris",
-    edad: 9,
+    
     peso: 220,
     genero: "Macho",
     origen: "Nepal",
     fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Indra",
     img: "https://i.postimg.cc/pXnvdfK1/e2c5f68f3c92c9a96b5f9e7fa2a7101c.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+  
+    peso: 8,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-04-22",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   }, 
             {
     nombre: "Javan",
     img: "https://i.postimg.cc/wBxT3tqy/415203ca3256279bdea3ea0442f407e9.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+
     peso: 200,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-08-14",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Rudra",
     img: "https://i.postimg.cc/wxnvFTVZ/fe3f604ec6143318a8b79f04fa36a28f.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+ 
+    peso: 24,
     genero: "Macho",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-02-28",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Tenzin",
     img: "https://i.postimg.cc/CxgKTP94/d0bd8215f3beb87f500b2c6093784426.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+    peso: 47,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2024-12-17",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Manas",
     img: "https://i.postimg.cc/pXg2QG2H/9958409d2fae909f513db5a434baf315.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+    peso:46,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-01-14",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Sumat",
     img: "https://i.postimg.cc/Kzyk9cxm/2f89307ff1023345ffa95cada8a74973.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+    peso: 116,
     genero: "Macho",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-04-29",
+  edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Bahadur",
     img: "https://i.postimg.cc/yNKstDgp/05e4a0711b6c794e967da9a7379cd57d.jpg",
     especie: "Panthera tigris",
-    edad: 7,
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-03-18",
+      edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Hanuman",
     img: "https://i.postimg.cc/Qxg6SVDd/2f9f142bd9b7200eb13d18c320568c19.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+  
     peso: 200,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2019-01-17",
+     edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Kumari",
     img: "https://i.postimg.cc/nrxbgmjd/bb5e75b1f15c9fc8a9eea2ebd72b0276.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+    
+    peso: 147,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-01-10",
+ edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Sita",
     img: "https://i.postimg.cc/P5DR1xFK/d84d0f6b7a68adca24e6553f19cb9523.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+ 
+    peso: 175,
     genero: "Hembra",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-07-30",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
             {
     nombre: "Tora",
     img: "https://i.postimg.cc/Z5TwQZYF/cbaf199fb3f7ebc7688031cbca7c1e8d.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+   
     peso: 200,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-01-27",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Chandi",
     img: "https://i.postimg.cc/9FcW068D/d441a3041fea378eb028b29357d40b3b.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 10,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-03-19",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Rafael",
     img: "https://i.postimg.cc/qvj1VYzf/2e24cbae1637c45e1b47859411f84bd7.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+   
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-02-20",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Malaika",
     img: "https://i.postimg.cc/KvQmM0wJ/ecf9f5f1243a3481e31e06e56b060c9a.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+   
+    peso: 6,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-04-29",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Parvati",
     img: "https://i.postimg.cc/fRW6QZHv/086c6a9c8a7692d0f2e08a1244a31232.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 189,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-08-04",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Meena",
     img: "https://i.postimg.cc/MK6sv5y6/75a311d574ab923db6aa53dffd6c89d3.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+    
     peso: 180,
     genero: "Hembra",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-12-28",
+ edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
          {
     nombre: "Devi",
     img: "https://i.postimg.cc/ncxypF69/046495c84b20cda7864e6b6e74761c51.jpg",
     especie: "Panthera tigris",
-    edad: 6,
+
     peso: 200,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-08-14",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Indira",
     img: "https://i.postimg.cc/jSFK8Lsf/e801ade04d8fe2af11604043a7975772.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 156,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-06-05",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Diego",
     img: "https://i.postimg.cc/Rh3qmm2D/10cfc938ab7c2c4a4b8bcee835af4f5e.jpg",
     especie: "Panthera tigris",
-    edad: 7,
     peso: 180,
     genero: "Macho",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2023-03-21",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Bijali",
     img: "https://i.postimg.cc/bN2ZcTfw/b6157dc8a5faf782d5886822c3d7088c.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+  
+    peso: 183,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2019-12-07",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Zena",
     img: "https://i.postimg.cc/GpLj32Rt/313169e69cd51cda9f8f0a0a5dc676f3.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+
+    peso: 181,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-12-19",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Tara",
     img: "https://i.postimg.cc/MHR9V39H/cc5c9e5aff4b8d6ae5ada17ba8395878.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+   
+    peso: 24,
     genero: "Hembra",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-01-23",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Dany",
     img: "https://i.postimg.cc/tTTvM86J/8203ea609b06103f94825c266847d5bd.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+ 
+    peso: 58,
     genero: "Macho",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2024-09-07",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Lila",
     img: "https://i.postimg.cc/3R66Mqfr/c215b2bb5e679a7a02255f9ce4a64de0.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+    
+    peso: 187,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2021-09-03",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Priya",
     img: "https://i.postimg.cc/m2x1XCfW/1058f50827f8a94e4272309bd0721ff3.jpg",
     especie: "Panthera tigris",
-    edad: 7,
-    peso: 180,
+   
+    peso: 145,
     genero: "Hembra",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2023-11-10",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Pema",
     img: "https://i.postimg.cc/g0mbJ8k3/d6058135ab490d21e421c7a752394cdf.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+    
+    peso: 168,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2022-08-13",
+edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Alina",
     img: "https://i.postimg.cc/9Q8XvLBr/3d152e90dcb5d433b831a98d7eab7be0.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 10,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-03-05",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
             {
     nombre: "Carlos",
     img: "https://i.postimg.cc/dQ4Bk5zt/cc0ebbc4174c954d7b445ff3c51d3170.jpg",
     especie: "Panthera tigris",
-    edad: 9,
+ 
     peso: 220,
     genero: "Macho",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-10-05",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Adriana",
     img: "https://i.postimg.cc/L51mfRdP/8e9d298b6c6f8630cdd0b4ad083407cc.jpg",
     especie: "Panthera tigris",
-    edad: 7,
+    
     peso: 180,
     genero: "Hembra",
     origen: "Tailandia",
-    fechaRescate: "2020-11-22",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2020-12-22",
+    edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Diana",
     img: "https://i.postimg.cc/Bn3Vcs90/d264270970c0d90c91bf536b376f2373.jpg",
     especie: "Panthera tigris",
-    edad: 6,
-    peso: 200,
+    
+    peso: 32,
     genero: "Hembra",
     origen: "India",
-    fechaRescate: "2019-08-14",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-01-27",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Carmen",
     img: "https://i.postimg.cc/fyfD5CLW/a0ae6754b2d12e9db908dba7ed142da5.jpg",
     especie: "Panthera tigris",
-    edad: 9,
-    peso: 220,
+   
+    peso: 14,
     genero: "Hembra",
     origen: "Nepal",
-    fechaRescate: "2017-06-05",
-    razonRescate: "Donado por zoológico en quiebra",
-    recinto: "Zona Tigres"
+    fechaRescate: "2025-05-18",
+   edadMesesAlRescate: 0,
+    razonRescate: " ",
+    recinto: " "
   },
   {
     nombre: "Jay",
@@ -1885,7 +1930,7 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     };
   
 
-
+saveAnimalData();
     // Mostrar detalles de un animal
     function showAnimalDetails(animal) {
         const mainContainer = document.getElementById("main-container");
@@ -1900,6 +1945,30 @@ let animalData = JSON.parse(localStorage.getItem('animalData')) || {
     detailsContainer.style.display = "block";
     animalTitle.innerText = `Ejemplares de ${animal}`;
     animalList.innerHTML = ""; // Limpiar contenido anterior
+
+//FUNCIÓN PARA LA EDAD POR AÑOS
+function calcularEdadActual(edadMesesAlRescate, fechaRescate) {
+  if (isNaN(edadMesesAlRescate)) return "Edad desconocida";
+
+  const fechaRescateDate = new Date(fechaRescate);
+  const hoy = new Date();
+
+  let años = hoy.getFullYear() - fechaRescateDate.getFullYear();
+  let meses = hoy.getMonth() - fechaRescateDate.getMonth();
+
+  if (meses < 0) {
+    años--;
+    meses += 12;
+  }
+
+  const totalMeses = edadMesesAlRescate + años * 12 + meses;
+
+  if (totalMeses < 12) return `${totalMeses} mes${totalMeses !== 1 ? 'es' : ''}`;
+
+  const edadAnios = Math.floor(totalMeses / 12);
+  return `${edadAnios} año${edadAnios !== 1 ? 's' : ''}`;
+}
+
 
 
     // Mostrar los animales
@@ -1926,16 +1995,14 @@ h3.innerText = item.nombre;
 const table = document.createElement("table");
 table.classList.add("animal-table");
 table.innerHTML = `
-  <tr><th>Edad</th><td>${item.edad}</td></tr>
+ <tr><th>Edad</th><td>${calcularEdadActual(item.edadMesesAlRescate, item.fechaRescate)}</td></tr>
+
   <tr><th>Peso</th><td>${item.peso} kg</td></tr>
   <tr><th>Sexo</th><td>${item.genero}</td></tr>
   <tr><th>Origen</th><td>${item.origen}</td></tr>
  <tr><th>Adopción: </th><td>$${item.donacionTotal ? item.donacionTotal.toFixed(2) : "0.00"}</td></tr>
 
 `;
-
-
-
 
 
 
